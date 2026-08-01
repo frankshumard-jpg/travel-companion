@@ -1,9 +1,12 @@
-﻿{
-  "name": "Frank & Lynn Travel Companion",
-  "short_name": "Frank & Lynn",
-  "description": "British Isles travel dashboard with destination pages and offline support.",
-  "start_url": "index.html",
-  "display": "browser",
+{
+  "name": "Beyond the Gangway Travel",
+  "short_name": "Beyond the Gangway",
+  "description": "Your intelligent cruise and travel companion for ports around the world.",
+  "id": "/",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#051827",
   "theme_color": "#0b294a",
   "icons": [
