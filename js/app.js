@@ -1,4 +1,4 @@
-const departureDate = new Date('2026-08-15T09:00:00');
+﻿const departureDate = new Date('2026-08-15T09:00:00');
 const flightStatusSamples = [
   { status: 'On time', gate: 'A12', flight: 'BA182', departure: '09:30' },
   { status: 'Boarding', gate: 'B4', flight: 'EY455', departure: '10:15' },
@@ -383,7 +383,7 @@ const layoutSections = [
   { key: 'seeDo', title: 'Things to See & Do' },
   { key: 'shopDining', title: 'Shopping & Dining' },
   { key: 'practical', title: 'Practical Information' },
-  { key: 'adventure', title: "Frank & Lynn's Adventure" }
+  { key: 'adventure', title: "Beyond the Gangway Adventure" }
 ];
 
 function normalizeHeading(text) {
@@ -1436,7 +1436,7 @@ function initializeGalleryToggle() {
       return;
     }
 
-    button.textContent = "Frank & Lynn's Photo Gallery";
+    button.textContent = "Beyond the Gangway Travel Photo Gallery";
     button.setAttribute('aria-expanded', 'false');
     content.style.transition = 'max-height 0.28s ease';
     updateGalleryContentHeight(content, false);
@@ -2660,7 +2660,7 @@ function buildLondonAttractionCard(template) {
       </details>
 
       <details id="${frankSaysId}" class="london-section london-section-frank-says">
-        ${buildLondonSectionSummary('💬 Frank Says...')}
+        ${buildLondonSectionSummary('💬 Beyond the Gangway Perspective...')}
         <div class="london-section-body">
           <p>${frankSaysText}</p>
         </div>
