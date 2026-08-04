@@ -1,0 +1,1091 @@
+:root {
+  color-scheme: dark;
+  --background: #051827;
+  --surface: #0f2f55;
+  --surface-alt: #143f71;
+  --text: #eef6ff;
+  --muted: #9fc2e1;
+  --accent: #ffd166;
+  --accent-strong: #ffba4f;
+  --border: rgba(255,255,255,.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, rgba(13, 58, 107, 0.65), transparent 28%), linear-gradient(180deg, #061b30 0%, #07111d 100%);
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  padding: 1.5rem clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(2, 23, 44, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.brand p {
+  margin: 0.75rem 0 0;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.main-nav a {
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 209, 102, 0.18);
+  border-color: rgba(255, 209, 102, 0.24);
+}
+
+.main-nav a.active {
+  color: var(--accent);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem clamp(1rem, 4vw, 2rem);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.9vw, 3.2rem);
+}
+
+.hero p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  max-width: 44rem;
+  line-height: 1.8;
+}
+
+.status-bar {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.status-bar strong {
+  display: block;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.hero-widgets {
+  display: grid;
+  gap: 1rem;
+}
+
+.widget,
+.overview-card,
+.destination-card {
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.countdown-card {
+  text-align: center;
+}
+
+.countdown-card h3,
+.status-card h3,
+.overview-card h3,
+.destination-card h3 {
+  margin-top: 0;
+  font-size: 1.29rem;
+}
+
+#countdown {
+  margin-top: 1.2rem;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.status-card #flight-status {
+  display: grid;
+  gap: 0.6rem;
+  font-size: 1.06rem;
+}
+
+.status-card strong {
+  color: var(--accent);
+}
+
+.status-card span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.overview-card p,
+.overview-card li {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.overview-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.destinations .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.destinations .section-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.destinations .section-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.destination-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+main > section.overview-grid > article.destination-card,
+main > section.card-grid > article.destination-card {
+  grid-column: 1 / -1;
+}
+
+.destination-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.24);
+}
+
+.london-action-bar {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 1.25rem;
+  column-gap: 1.25rem;
+}
+
+.london-action-bar .button {
+  width: 100%;
+}
+
+main[data-london-phase1-ui="true"] .london-places-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+main[data-london-phase1-ui="true"] .london-attraction-accordion {
+  grid-column: 1 / -1;
+}
+
+main[data-london-phase1-ui="true"] .london-attraction-accordion > .london-section-body > .destination-card {
+  width: 100%;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 1.1rem;
+  column-gap: 1.1rem;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar .button {
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.25;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="maps/search/?api=1"] {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="travelmode=walking"]:not([href*="dir_action=navigate"]) {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="dir_action=navigate"] {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="travelmode=transit"] {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > [data-london-toggle-target*="nearby"] {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > [data-london-toggle-target*="travel"] {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > [data-london-toggle-target*="gallery"] {
+  grid-row: 4;
+  grid-column: 1 / -1;
+  margin-bottom: 0.55rem;
+}
+
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="travelmode=walking"],
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="dir_action=navigate"],
+main[data-london-phase1-ui="true"] .london-action-bar > a[href*="travelmode=transit"],
+main[data-london-phase1-ui="true"] .london-personal-actions > a[href="todays-plan.html"] {
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  box-shadow: none;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  row-gap: 0.9rem !important;
+  column-gap: 1.1rem !important;
+  margin-top: 0.15rem !important;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions .button {
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > [data-add-to-today-plan] {
+  order: 1;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > [data-favorite-attraction] {
+  order: 2;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > [data-visit-status] {
+  order: 3;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > a[href="todays-plan.html"] {
+  order: 4;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > a[href="my-favorites.html"] {
+  order: 5;
+  grid-column: 1 / -1;
+}
+
+.london-personal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.london-personal-actions .button {
+  flex: 1 1 11rem;
+}
+
+.plan-stop-card {
+  cursor: grab;
+}
+
+.plan-stop-card:active {
+  cursor: grabbing;
+}
+
+.london-section,
+.london-subsection {
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  padding-top: 0.2rem;
+}
+
+.london-section-summary,
+.london-subsection-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  width: 100%;
+  min-height: 2.25rem;
+  padding: 0.7rem 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.17rem;
+  line-height: 1.3;
+}
+
+.london-section-summary::-webkit-details-marker,
+.london-subsection-summary::-webkit-details-marker {
+  display: none;
+}
+
+.london-section-body {
+  padding: 0.2rem 0 0.4rem;
+}
+
+.london-section-body p,
+.london-section-body li {
+  color: var(--muted);
+}
+
+.london-subsection {
+  margin-top: 0.6rem;
+}
+
+.london-subsection-summary {
+  color: var(--text);
+  font-size: 1.14rem;
+}
+
+.london-section[open] .london-section-summary,
+.london-subsection[open] .london-subsection-summary {
+  color: var(--accent-strong);
+}
+
+.london-summary-title {
+  flex: 1;
+}
+
+.london-summary-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35em;
+  height: 1.35em;
+  font-size: 1.3em;
+  line-height: 1;
+  color: var(--muted);
+}
+
+main[data-london-phase1-ui="true"] .london-attraction-accordion > .london-section-summary .london-summary-title {
+  font-size: 1.42rem;
+}
+
+main[data-london-phase1-ui="true"] .london-attraction-accordion > .london-section-summary {
+  font-size: 1.31rem;
+}
+
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-summary {
+  font-size: 1.18rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(243, 225, 182, 0.96) 0%, rgba(205, 170, 98, 0.9) 100%);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 0.85rem;
+}
+
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-summary .london-summary-title {
+  color: #3d2b12;
+  font-weight: 800;
+}
+
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-summary .london-summary-icon {
+  color: #4a3514;
+}
+
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-body {
+  background: rgba(255, 209, 102, 0.06);
+  border-left: 3px solid var(--accent);
+  padding: 0.95rem 1rem 1rem;
+}
+
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-body p,
+main[data-london-phase1-ui="true"] #london-practical-panel > .london-section-body li {
+  font-size: 1.05rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-card {
+  margin: 0;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 209, 102, 0.22);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-table {
+  width: 100%;
+  min-width: 44rem;
+  border-collapse: collapse;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-table th,
+main[data-london-phase1-ui="true"] .before-you-go-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  word-break: break-word;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-table th {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-meta {
+  margin-top: 0.2rem;
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 0.45rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-actions.compact {
+  grid-template-columns: minmax(6.5rem, 1fr) 2.4rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-actions .button {
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-actions.compact .button {
+  min-height: 2rem;
+  padding: 0.42rem 0.45rem;
+  font-size: 0.84rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-stack-actions {
+  display: grid;
+  gap: 0.5rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-plain-list {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-nearby-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+main[data-london-phase1-ui="true"] .before-you-go-nearby-list li {
+  margin: 0;
+}
+
+main[data-london-phase1-ui="true"] .voice-reroute-card .button {
+  justify-content: center;
+}
+
+main[data-london-phase1-ui="true"] #before-you-go-good-to-know-list {
+  margin-top: 0.5rem;
+}
+
+.destination-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.photo-gallery {
+  margin: 2rem 0;
+}
+
+.photo-gallery h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(255, 209, 102, 0.25);
+  padding-bottom: 0.85rem;
+}
+
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.photo-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 209, 102, 0.14);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.photo-thumb-btn {
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.photo-thumb-btn img {
+  width: 100%;
+  max-height: 16rem;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-input-label {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.photo-section-select {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 0.85rem 1rem;
+  outline: none;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.photo-card h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.photo-placeholder {
+  min-height: 12rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 209, 102, 0.32);
+}
+
+.photo-card input,
+.photo-card textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 0.85rem 1rem;
+  outline: none;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.photo-card input::placeholder,
+.photo-card textarea::placeholder {
+  color: rgba(159, 194, 225, 0.7);
+}
+
+.photo-card textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.photo-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-photo-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.inline-photo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0.8rem 0 0.35rem;
+}
+
+.inline-thumb-btn {
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.inline-thumb-btn img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-action-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+}
+
+.photo-action-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 8, 16, 0.66);
+}
+
+.photo-action-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: none;
+  background: rgba(7, 24, 39, 0.98);
+  backdrop-filter: blur(12px);
+}
+
+.photo-action-panel h4 {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+}
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  background: rgba(2, 8, 16, 0.92);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.photo-lightbox[hidden] {
+  display: none !important;
+}
+
+.photo-lightbox img {
+  max-width: min(96vw, 980px);
+  max-height: 75vh;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.photo-gallery {
+  margin: 2rem 0;
+}
+
+.photo-gallery h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(255, 209, 102, 0.25);
+  padding-bottom: 0.85rem;
+}
+
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.photo-gallery-collapsible {
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery-toggle {
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1rem 1.25rem;
+  font-size: 1.17rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-toggle::after {
+  content: '\25BC';
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.gallery-toggle[aria-expanded="true"]::after {
+  content: '\25B2';
+}
+
+.gallery-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.28s ease;
+}
+
+@media (max-width: 720px) {
+  .photo-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inline-photo-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.17rem;
+  line-height: 1.2;
+  background: var(--accent);
+  color: #07101e;
+  box-shadow: 0 14px 28px rgba(255, 209, 102, 0.22);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+main[data-london-phase1-ui="true"] .london-personal-actions > [data-add-to-today-plan] {
+  font-size: 1.07rem;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  box-shadow: none;
+}
+
+.transport-panel {
+  border: 1px solid rgba(255, 209, 102, 0.26);
+  border-radius: 18px;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(8, 36, 66, 0.8), rgba(6, 28, 52, 0.85));
+}
+
+.transport-panel-title {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid rgba(255, 209, 102, 0.35);
+  border-bottom: 1px solid rgba(255, 209, 102, 0.35);
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  font-size: 1.03rem;
+}
+
+.transport-panel-field {
+  margin: 0.45rem 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.06rem;
+}
+
+.transport-panel-field strong {
+  color: var(--text);
+}
+
+.transport-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+
+.transport-panel .button {
+  min-width: 13.5rem;
+}
+
+.site-footer {
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.03rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-intro {
+  padding: 2rem 0;
+}
+
+.page-intro h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.page-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.placeholder {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 1.06rem;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 960px) {
+  .hero,
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .london-action-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.85rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .destination-card {
+    width: 100%;
+  }
+
+  .destination-card,
+  .overview-card,
+  .widget {
+    padding: 1.2rem;
+  }
+
+  .london-action-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1.35rem;
+    column-gap: 1.25rem;
+  }
+
+  .london-action-bar > :nth-child(5) {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+
+  .london-action-bar .button {
+    width: 100%;
+    min-height: 3.45rem;
+    padding: 1rem 0.95rem;
+  }
+
+  main[data-london-phase1-ui="true"] .london-action-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main[data-london-phase1-ui="true"] .london-personal-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    row-gap: 1rem !important;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-table {
+    min-width: 36rem;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-actions {
+    grid-template-columns: 1fr;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-actions.compact {
+    grid-template-columns: 1fr 2.4rem;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-nav a {
+    padding: 0.7rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  .london-action-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .london-action-bar > :nth-child(5) {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+
+  main[data-london-phase1-ui="true"] .london-action-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-card {
+    min-width: 0;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-table {
+    min-width: 100%;
+    table-layout: fixed;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-table th,
+  main[data-london-phase1-ui="true"] .before-you-go-table td {
+    padding: 0.45rem 0.25rem;
+    font-size: 0.78rem;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-meta,
+  main[data-london-phase1-ui="true"] .before-you-go-note {
+    font-size: 0.78rem;
+  }
+
+  main[data-london-phase1-ui="true"] .before-you-go-actions.compact {
+    grid-template-columns: minmax(0, 1fr) 2.2rem;
+  }
+}

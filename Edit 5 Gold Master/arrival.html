@@ -1,0 +1,356 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b294a">
+  <title>Arrival Day | Beyond the Gangway Travel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    main > section.overview-grid,
+    main > section.card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 0.55rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    main > section.overview-grid > article.overview-card,
+    main > section.card-grid > article.destination-card {
+      margin: 0;
+      height: 100%;
+      border-radius: 0.95rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    main > section + section {
+      margin-top: 0.1rem;
+    }
+
+    main > section.group-section {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+    }
+
+    .group-title {
+      margin: 0;
+      padding: 0.2rem 0.2rem 0.1rem;
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+      color: var(--accent-strong);
+    }
+
+    main details.london-section {
+      border-top: none;
+      padding-top: 0;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.018);
+      padding-inline: 0.5rem;
+    }
+
+    main details.london-section > .london-section-summary {
+      padding: 0.78rem 0.35rem;
+    }
+
+    main details.london-section > .london-section-body {
+      padding: 0.2rem 0.35rem 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      main > section.overview-grid,
+      main > section.card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      main {
+        gap: 0.95rem;
+      }
+
+      main > section.overview-grid,
+      main > section.card-grid {
+        padding: 0.4rem;
+        border-radius: 0.85rem;
+      }
+
+      main > section.group-section {
+        padding: 0.5rem;
+      }
+
+      .group-title {
+        font-size: 1rem;
+      }
+
+      main > section.overview-grid > article.overview-card,
+      main > section.card-grid > article.destination-card {
+        border-radius: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <a class="home-link" href="index.html">Beyond the Gangway Travel</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="arrival.html" class="active">Arrival Day</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="dover.html">Dover</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <h1>Arrival Day Logistics</h1>
+        <p class="subtitle">Travel-day checklist from the United States to Heathrow and onward to The May Fair Hotel.</p>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Flight and Arrival Overview</summary>
+          <div class="london-section-body">
+            <section class="overview-grid">
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">United Airlines Flight Information</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Carrier:</strong> United Airlines</li>
+                      <li><strong>Travel day focus:</strong> Long-haul US departure to London Heathrow (LHR)</li>
+                      <li><strong>Arrival target:</strong> Heathrow Airport around midday local time</li>
+                      <li><strong>Reminder:</strong> Confirm terminal, baggage policy, and seat assignments in the United app before boarding</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Heathrow Arrival Steps</summary>
+                  <div class="london-section-body">
+                    <ol>
+                      <li>Follow signs to UK Border / Immigration.</li>
+                      <li>Keep passports and landing details ready for inspection.</li>
+                      <li>Proceed to baggage claim once cleared.</li>
+                      <li>After baggage collection, continue to Customs exit and arrivals hall.</li>
+                    </ol>
+                  </div>
+                </details>
+              </article>
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Airport to Hotel Transfer</summary>
+          <div class="london-section-body">
+            <section class="overview-grid">
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Immigration, Customs, and Baggage Reminders</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Immigration:</strong> Have passport and any required travel documentation immediately available.</li>
+                      <li><strong>Customs:</strong> Keep declarations accurate and accessible before you reach the inspection point.</li>
+                      <li><strong>Baggage claim:</strong> Check monitors for your belt number and verify every checked bag before exit.</li>
+                      <li><strong>Delayed baggage:</strong> Report missing bags at the airline desk before leaving the secure area.</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Private Transfer to The May Fair Hotel</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Pickup point:</strong> Heathrow arrivals hall (as directed by transfer provider)</li>
+                      <li><strong>Estimated ride time:</strong> 45-90 minutes depending on traffic</li>
+                      <li><strong>Driver coordination:</strong> Keep phone on and monitor messages after clearing Customs</li>
+                      <li><strong>Contingency:</strong> If you cannot find the driver, contact the transfer company first, then hotel concierge</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Hotel Information</summary>
+          <div class="london-section-body">
+            <section class="overview-grid">
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">The May Fair Hotel Details</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Hotel:</strong> The May Fair, A Radisson Collection Hotel</li>
+                      <li><strong>Address:</strong> Stratton Street, Mayfair, London W1J 8LT, United Kingdom</li>
+                      <li><strong>Phone:</strong> +44 20 7769 8200</li>
+                      <li><strong>Website:</strong> https://www.themayfairhotel.co.uk</li>
+                      <li><strong>Check-in:</strong> Standard check-in is typically in the afternoon; request early check-in at the front desk if room is not ready.</li>
+                    </ul>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                      <a class="button" href="https://www.themayfairhotel.co.uk" target="_blank" rel="noopener noreferrer">Hotel Website</a>
+                      <a class="button secondary" href="tel:+442077698200">Call Hotel</a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="overview-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Emergency and Essential Contacts</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>UK emergency services:</strong> 999</li>
+                      <li><strong>NHS non-emergency medical line:</strong> 111</li>
+                      <li><strong>Police non-emergency:</strong> 101</li>
+                      <li><strong>Hotel front desk:</strong> +44 20 7769 8200</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Arrival Day Practical Reminders</summary>
+          <div class="london-section-body">
+            <section class="card-grid">
+              <article class="destination-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Money, Phone, and Power</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Currency:</strong> Keep a small amount of GBP available for immediate expenses.</li>
+                      <li><strong>SIM/eSIM:</strong> Activate roaming or eSIM profile before leaving the airport.</li>
+                      <li><strong>Electrical adapter:</strong> UK Type G plug required; confirm you packed adapter and charging cables.</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+
+              <article class="destination-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Time Difference and Jet Lag</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>Time shift:</strong> London time is significantly ahead of most US time zones.</li>
+                      <li><strong>Jet lag strategy:</strong> Hydrate, stay active through early evening, and avoid long naps on arrival day.</li>
+                      <li><strong>Sleep target:</strong> Aim for a normal local bedtime to reset quickly.</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+
+              <article class="destination-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">First-Day Tips After Check-In</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li>Secure passports and valuables in-room before heading out.</li>
+                      <li>Take a short neighborhood walk only if energy allows.</li>
+                      <li>Keep the evening light and focus on rest for the next day.</li>
+                    </ul>
+                  </div>
+                </details>
+              </article>
+
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Nearby Essentials Around The May Fair</summary>
+          <div class="london-section-body">
+            <section class="card-grid">
+              <article class="destination-card">
+                <details class="london-section" open>
+                  <summary class="london-section-summary">Nearby Essentials Around The May Fair</summary>
+                  <div class="london-section-body">
+                    <ul>
+                      <li><strong>ATM:</strong> Cash points available around Piccadilly and Green Park station area.</li>
+                      <li><strong>Pharmacy:</strong> Boots and Superdrug locations within central Mayfair.</li>
+                      <li><strong>Groceries:</strong> Marks and Spencer Food Hall and local convenience stores nearby.</li>
+                    </ul>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=ATM+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby ATM</a>
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Pharmacy+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby Pharmacy</a>
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Grocery+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby Grocery</a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Facebook Journal</summary>
+          <div class="london-section-body">
+            <h2>Arrival Day Facebook Journal</h2>
+            <p>Write the short version of arrival day highlights to share with friends.</p>
+            <textarea placeholder="Arrival Day Facebook journal..."></textarea>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Book Journal</summary>
+          <div class="london-section-body">
+            <h2>Arrival Day Book Journal</h2>
+            <p>Write the full arrival day story with details, notes, and reflections.</p>
+            <textarea placeholder="Arrival Day book journal..."></textarea>
+          </div>
+        </details>
+      </section>
+
+      <section class="page-actions">
+        <a class="button" href="index.html">Return to Dashboard</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Arrival day logistics page for Heathrow arrival and hotel transfer planning.</p>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

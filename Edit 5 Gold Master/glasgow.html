@@ -1,0 +1,1327 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b294a">
+  <title>Glasgow | Beyond the Gangway Travel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    main > section.overview-grid,
+    main > section.card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 0.55rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    main > section.overview-grid > article.overview-card,
+    main > section.card-grid > article.destination-card {
+      margin: 0;
+      height: 100%;
+      border-radius: 0.95rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    main > section + section {
+      margin-top: 0.1rem;
+    }
+
+    main > section.group-section {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+    }
+
+    .group-title {
+      margin: 0;
+      padding: 0.2rem 0.2rem 0.1rem;
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+      color: var(--accent-strong);
+    }
+
+    main details.london-section {
+      border-top: none;
+      padding-top: 0;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.018);
+      padding-inline: 0.5rem;
+    }
+
+    main details.london-section > .london-section-summary {
+      padding: 0.78rem 0.35rem;
+    }
+
+    main details.london-section > .london-section-body {
+      padding: 0.2rem 0.35rem 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      main > section.overview-grid,
+      main > section.card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      main {
+        gap: 0.95rem;
+      }
+
+      main > section.overview-grid,
+      main > section.card-grid {
+        padding: 0.4rem;
+        border-radius: 0.85rem;
+      }
+
+      main > section.group-section {
+        padding: 0.5rem;
+      }
+
+      .group-title {
+        font-size: 1rem;
+      }
+
+      main > section.overview-grid > article.overview-card,
+      main > section.card-grid > article.destination-card {
+        border-radius: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <a class="home-link" href="index.html">Beyond the Gangway Travel</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="london.html">London</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="glasgow.html" class="active">Glasgow</a>
+        <a href="dover.html">Dover</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-intro">
+        <h1>Glasgow Travel Guide</h1>
+        <p class="subtitle">Glasgow city companion with cruise-port arrival planning, Buchanan Street logistics, attraction routing, and day-trip options for August 2026.</p>
+      </section>
+
+      <section class="overview-grid">
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Kelvingrove Art Gallery and Museum</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Kelvingrove+Art+Gallery+and+Museum+Glasgow" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Kelvingrove+Art+Gallery+and+Museum+Glasgow&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Kelvingrove+Art+Gallery+and+Museum+Glasgow&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="kelvingrove-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="kelvingrove-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="kelvingrove-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="kelvingrove-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="kelvingrove-art-gallery-and-museum">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="kelvingrove-art-gallery-and-museum">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="kelvingrove-art-gallery-and-museum">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Major Glasgow cultural landmark with broad collections and strong first-stop pacing.</p>
+                  <ul>
+                    <li>Highlights include art, history, natural history, and rotating exhibitions.</li>
+                    <li>Best paired with Buchanan Street stops to keep the day practical and flexible.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 90-150 minutes depending on exhibit focus.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> General access is typically free.</li>
+                    <li><strong>Best Time to Visit:</strong> Morning for lighter gallery flow.</li>
+                    <li><strong>Walking Difficulty:</strong> Easy to moderate, mostly indoors.</li>
+                    <li><strong>Rain Alternative:</strong> Ideal primary indoor anchor in wet weather.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="kelvingrove-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From cruise transfer drop-off:</strong> Taxi or bus into west-central museum area.</li>
+                    <li><strong>Bus option:</strong> Frequent routes toward Argyle Street and Kelvingrove Park.</li>
+                    <li><strong>Taxi option:</strong> Best for preserving morning museum time.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="kelvingrove-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Kelvingrove Park</strong> <span>2-minute walk</span></li>
+                    <li><strong>University of Glasgow</strong> <span>12-minute walk</span></li>
+                    <li><strong>Riverside Museum</strong> <span>10-minute drive</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="kelvingrove-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Use this as your first major stop so the rest of the city route stays flexible.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Choose two exhibit priorities first, then expand only if time stays on track.</p>
+                  <textarea data-my-notes-key="kelvingrove-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Kelvingrove Art Gallery and Museum..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>This is the most reliable low-stress start for a Glasgow port day.</p>
+                </div>
+              </details>
+
+              <details id="kelvingrove-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Glasgow photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Buchanan Street</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Buchanan+Street+Glasgow" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Buchanan+Street+Glasgow&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Buchanan+Street+Glasgow&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="buchanan-street-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="buchanan-street-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="buchanan-street-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="buchanan-street-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="buchanan-street">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="buchanan-street">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="buchanan-street">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Historic Old Town corridor connecting castle-side viewpoints to Holyroodhouse.</p>
+                  <ul>
+                    <li>Excellent first-day route for landmarks, shops, cafés, and quick cultural stops.</li>
+                    <li>Easy to combine with St Giles' Cathedral, Grassmarket, and museum stops.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 60-120 minutes for a focused walk, longer with attraction entries.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Street access is free; some individual sites require timed tickets.</li>
+                    <li><strong>Best Time to Visit:</strong> Early morning or late afternoon for lighter foot traffic.</li>
+                    <li><strong>Walking Difficulty:</strong> Moderate with inclines and cobbled stretches.</li>
+                    <li><strong>Rain Alternative:</strong> National Museum of Scotland.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="royal-mile-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From cruise transfer drop-off:</strong> Reach the Royal Mile via central Waverley/Old Town approach.</li>
+                    <li><strong>Bus option:</strong> Multiple city routes stop near North Bridge and Old Town edges.</li>
+                    <li><strong>Taxi option:</strong> Useful in rain or when carrying purchases/day bags.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="royal-mile-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>St Giles' Cathedral</strong> <span>2-minute walk</span></li>
+                    <li><strong>Grassmarket</strong> <span>8-minute walk</span></li>
+                    <li><strong>Palace of Holyroodhouse</strong> <span>12-15 minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="royal-mile-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Festival windows can cause dense crowding; set a meeting point and keep route flexibility.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Walk downhill from castle side toward Holyroodhouse to reduce effort and preserve energy.</p>
+                  <textarea data-my-notes-key="royal-mile-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Royal Mile..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>Use side closes for atmosphere and photos, but keep your main return path simple.</p>
+                </div>
+              </details>
+
+              <details id="royal-mile-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Glasgow Cathedral</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Glasgow+Cathedral" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Glasgow+Cathedral&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Glasgow+Cathedral&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="glasgow-cathedral-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="glasgow-cathedral-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="glasgow-cathedral-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="glasgow-cathedral-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="glasgow-cathedral">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="glasgow-cathedral">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="glasgow-cathedral">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Evening performance event at the castle esplanade with ceremony, bands, and city atmosphere.</p>
+                  <ul>
+                    <li>One of Edinburgh's signature seasonal experiences with strong visual staging.</li>
+                    <li>Plan around entry queues, security checks, and post-event crowd exits.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 2-3 hours including arrival, seating, and exit flow.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Ticketed event with assigned seating.</li>
+                    <li><strong>Best Time to Visit:</strong> Arrive 45-60 minutes before listed gate entry.</li>
+                    <li><strong>Walking Difficulty:</strong> Moderate uphill approach and step access in places.</li>
+                    <li><strong>Rain Alternative:</strong> Keep a weatherproof layer and flexible pre-show indoor stop.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="edinburgh-tattoo-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Primary route:</strong> Approach from central Old Town and allow extra crowd time.</li>
+                    <li><strong>Bus option:</strong> Use nearest central stops then complete final uphill walk.</li>
+                    <li><strong>Taxi option:</strong> Drop as close as road controls allow on event nights.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="edinburgh-tattoo-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Edinburgh Castle</strong> <span>On site area</span></li>
+                    <li><strong>Royal Mile</strong> <span>5-minute walk</span></li>
+                    <li><strong>Princes Street Gardens</strong> <span>10-minute walk downhill</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="edinburgh-tattoo-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>After the show, pedestrian flow is heavy. Use a pre-agreed meeting point and a calm exit route.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Bring layers and keep phones charged for late-evening navigation back to your transfer point.</p>
+                  <textarea data-my-notes-key="edinburgh-tattoo-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Royal Edinburgh Military Tattoo..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>Set your ride strategy before the event starts; post-show demand rises quickly.</p>
+                </div>
+              </details>
+
+              <details id="edinburgh-tattoo-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Palace of Holyroodhouse</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="palace-of-holyroodhouse">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="palace-of-holyroodhouse">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="palace-of-holyroodhouse">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Royal residence with formal rooms, abbey ruins, and easier pacing than peak castle queues.</p>
+                  <ul>
+                    <li>Strong historical interiors and grounds near the eastern end of the Royal Mile.</li>
+                    <li>Useful lower-effort counterpart to hill-heavy sightseeing routes.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 90-120 minutes including palace rooms and abbey area.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Ticketed entry with timed sessions on busy days.</li>
+                    <li><strong>Best Time to Visit:</strong> Mid-morning after castle crowds peak.</li>
+                    <li><strong>Walking Difficulty:</strong> Easy to moderate.</li>
+                    <li><strong>Rain Alternative:</strong> Continue to nearby museum/gallery stops in Old Town.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="holyroodhouse-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From Royal Mile:</strong> Straightforward downhill walk to palace entrance zone.</li>
+                    <li><strong>Bus option:</strong> City buses serve the Holyrood/Canongate approach.</li>
+                    <li><strong>Taxi option:</strong> Easy drop-off for mobility support or weather avoidance.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="holyroodhouse-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Royal Mile</strong> <span>2-minute walk</span></li>
+                    <li><strong>Arthur's Seat approach</strong> <span>10-minute walk</span></li>
+                    <li><strong>Scottish Parliament</strong> <span>3-minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="holyroodhouse-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>This stop combines well with Arthur's Seat or Royal Mile, depending on weather and energy level.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Use this attraction as a lower-effort block between hill climbs and evening activities.</p>
+                  <textarea data-my-notes-key="holyroodhouse-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Palace of Holyroodhouse..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>If weather shifts, this is one of the easiest indoor-focused anchor stops in the Old Town plan.</p>
+                </div>
+              </details>
+
+              <details id="holyroodhouse-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Arthur's Seat</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="arthurs-seat">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="arthurs-seat">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="arthurs-seat">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Panoramic hill walk for top city and coastline views when weather is stable.</p>
+                  <ul>
+                    <li>One of Edinburgh's best natural vantage points with broad skyline panoramas.</li>
+                    <li>Best paired with Holyroodhouse and lower Old Town stops in the same route.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 90-150 minutes depending on route and weather.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Open public hill access.</li>
+                    <li><strong>Best Time to Visit:</strong> Morning or early evening in clear conditions.</li>
+                    <li><strong>Walking Difficulty:</strong> Moderate to challenging on steeper segments.</li>
+                    <li><strong>Rain Alternative:</strong> National Museum of Scotland for an indoor pivot.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="arthurs-seat-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Primary access:</strong> Reach the Holyrood side and start ascent from marked paths.</li>
+                    <li><strong>Bus option:</strong> Use routes toward Holyrood/Canongate then walk to trail entry.</li>
+                    <li><strong>Taxi option:</strong> Practical if weather shifts or timing is tight.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="arthurs-seat-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Palace of Holyroodhouse</strong> <span>10-minute walk</span></li>
+                    <li><strong>Royal Mile</strong> <span>15-minute walk</span></li>
+                    <li><strong>Scottish Parliament</strong> <span>12-minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="arthurs-seat-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Check wind and rain before starting. Use safer lower routes if conditions deteriorate.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Carry water and a shell layer, and avoid the steepest path when stones are slick.</p>
+                  <textarea data-my-notes-key="arthurs-seat-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Arthur's Seat..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>Go up only if conditions are good; the view is worth it, but safety and timing come first.</p>
+                </div>
+              </details>
+
+              <details id="arthurs-seat-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">National Museum of Scotland</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="national-museum-of-scotland">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="national-museum-of-scotland">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="national-museum-of-scotland">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Major museum stop with broad Scottish and global collections plus weather-safe indoor routing.</p>
+                  <ul>
+                    <li>Excellent backup for wet weather and a strong midday reset point.</li>
+                    <li>Central location works well with Royal Mile and Grassmarket loops.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 90-180 minutes depending on exhibit focus.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> General entry is typically free; special exhibitions may be ticketed.</li>
+                    <li><strong>Best Time to Visit:</strong> Midday when outdoor attractions are most crowded.</li>
+                    <li><strong>Walking Difficulty:</strong> Easy to moderate indoors.</li>
+                    <li><strong>Rain Alternative:</strong> This attraction itself is the primary rain alternative.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="national-museum-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From Royal Mile:</strong> Short walk via Old Town side streets.</li>
+                    <li><strong>Bus option:</strong> Frequent services to central museum district corridors.</li>
+                    <li><strong>Taxi option:</strong> Useful if weather is poor or schedule is compressed.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="national-museum-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Royal Mile</strong> <span>8-minute walk</span></li>
+                    <li><strong>Grassmarket</strong> <span>10-minute walk</span></li>
+                    <li><strong>St Giles' Cathedral</strong> <span>10-minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="national-museum-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Use upper-floor viewpoints for quick orientation before deciding your next district move.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Choose two or three exhibit priorities first so you do not lose time in the full building sweep.</p>
+                  <textarea data-my-notes-key="national-museum-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for National Museum of Scotland..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>This is your best weather-proof anchor when rain threatens hill walks or long outdoor legs.</p>
+                </div>
+              </details>
+
+              <details id="national-museum-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Grassmarket</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="grassmarket">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="grassmarket">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="grassmarket">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Lively square for lunch and pub breaks with strong castle-backdrop photo angles.</p>
+                  <ul>
+                    <li>Great reset zone between castle, Royal Mile, and museum legs.</li>
+                    <li>Strong food and pub density with quick route flexibility.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 45-90 minutes depending on meal stop and photos.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Public square, no entry ticket needed.</li>
+                    <li><strong>Best Time to Visit:</strong> Late morning or early evening for dining windows.</li>
+                    <li><strong>Walking Difficulty:</strong> Moderate, cobbled surface in places.</li>
+                    <li><strong>Rain Alternative:</strong> Nearby indoor cafés and museum route continuation.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="grassmarket-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From Castle area:</strong> Short downhill walk with good wayfinding.</li>
+                    <li><strong>Bus option:</strong> Central routes nearby via Old Town edge roads.</li>
+                    <li><strong>Taxi option:</strong> Good option when carrying shopping or avoiding rain.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="grassmarket-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Edinburgh Castle</strong> <span>8-minute walk uphill</span></li>
+                    <li><strong>Victoria Street</strong> <span>3-minute walk</span></li>
+                    <li><strong>National Museum of Scotland</strong> <span>10-minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="grassmarket-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Use this stop to reset pace, hydrate, and decide whether to continue uphill or shift districts.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Choose a quick meal here before evening events to avoid late queue crunches.</p>
+                  <textarea data-my-notes-key="grassmarket-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Grassmarket..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>This is one of the best places to rebalance your day without losing sightseeing momentum.</p>
+                </div>
+              </details>
+
+              <details id="grassmarket-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Dean Village</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="dean-village">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="dean-village">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="dean-village">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Quiet riverside district with historic architecture and a calmer contrast to Old Town crowds.</p>
+                  <ul>
+                    <li>Excellent low-crowd photo walk with a slower pace and scenic waterway views.</li>
+                    <li>Pairs well with a New Town or Princes Street extension.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 45-75 minutes including photos and riverside walk.</p>
+                </div>
+              </details>
+
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Open neighborhood walk, no ticket needed.</li>
+                    <li><strong>Best Time to Visit:</strong> Morning light or late afternoon for quieter paths.</li>
+                    <li><strong>Walking Difficulty:</strong> Easy to moderate with minor gradients.</li>
+                    <li><strong>Rain Alternative:</strong> Shift to nearby indoor galleries or cafés in New Town.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="dean-village-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From city core:</strong> Walk from Princes Street area or use short taxi transfer.</li>
+                    <li><strong>Bus option:</strong> Stop near western city center and walk final segment.</li>
+                    <li><strong>Taxi option:</strong> Efficient if combining with multiple districts in one day.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="dean-village-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Scottish National Gallery of Modern Art</strong> <span>10-minute walk</span></li>
+                    <li><strong>Princes Street</strong> <span>15-minute walk</span></li>
+                    <li><strong>Water of Leith Walkway</strong> <span>On route</span></li>
+                  </ul>
+                </div>
+              </details>
+
+              <details id="dean-village-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Best visited as a quieter intermission between busy Old Town and central shopping zones.</p>
+                </div>
+              </details>
+
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Take your time for riverside photography and avoid rushing this stop between crowded attractions.</p>
+                  <textarea data-my-notes-key="dean-village-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Dean Village..."></textarea>
+                </div>
+              </details>
+
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>Dean Village is a pace reset stop; use it to recharge before re-entering higher-crowd areas.</p>
+                </div>
+              </details>
+
+              <details id="dean-village-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Edinburgh photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">📅 Planned Excursions</summary>
+          <div class="london-section-body">
+            <details class="london-section">
+              <summary class="london-section-summary">Glasgow Overview</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Cruise context:</strong> Build each day around port transfer time, Old Town walking pace, and return-to-ship buffer.</li>
+                  <li><strong>City character:</strong> Steep hills, cobblestones, narrow closes, and fast weather shifts influence route planning.</li>
+                  <li><strong>Best rhythm:</strong> Pair one major paid site with two nearby open-air stops to avoid over-packing the day.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Today's Plan</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Morning:</strong> Transfer from cruise port to central Glasgow and start at Kelvingrove Art Gallery and Museum.</li>
+                  <li><strong>Midday:</strong> Lunch around Grassmarket, then continue to the National Museum of Scotland.</li>
+                  <li><strong>Afternoon:</strong> Choose Arthur's Seat for views or Palace of Holyroodhouse for a lower-climb option.</li>
+                  <li><strong>Return:</strong> Head back toward port with at least a 75-minute safety buffer.</li>
+                </ul>
+                <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                  <a class="button" href="todays-plan.html">Open Today's Plan</a>
+                  <a class="button secondary" href="my-favorites.html">My Favorites</a>
+                </div>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Glasgow Cathedral Visit Window</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Venue:</strong> Glasgow Cathedral district.</li>
+                  <li><strong>Arrival:</strong> Aim to arrive 45-60 minutes before gate time due to crowd flow and security checks.</li>
+                  <li><strong>Clothing:</strong> Bring a windproof layer and light rain shell; evening temperatures drop quickly.</li>
+                  <li><strong>Exit strategy:</strong> Pre-select a meeting point near Princes Street for easier regrouping after the show.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Dirleton Castle Day Trip</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Outbound:</strong> Take regional rail or coach toward North Berwick area, then local taxi/bus to Dirleton.</li>
+                  <li><strong>On-site:</strong> Explore castle ruins and gardens, then continue to nearby coastal villages if time allows.</li>
+                  <li><strong>Total planning window:</strong> Allow 5-7 hours round trip including transfers.</li>
+                  <li><strong>Return:</strong> Lock in latest safe return time to cruise port before departure cut-off.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Transportation &amp; Getting Around</summary>
+          <div class="london-section-body">
+            <details class="london-section">
+              <summary class="london-section-summary">Cruise Port to City Center</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Fastest:</strong> Direct taxi or pre-booked transfer to the Royal Mile / Waverley zone.</li>
+                  <li><strong>Budget option:</strong> Port shuttle plus local bus/tram connection into central Edinburgh.</li>
+                  <li><strong>Timing:</strong> Morning transfer typically ranges 35-60 minutes depending on traffic and festival congestion.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">City Mobility Strategy</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Walking core:</strong> Best for Castle, Royal Mile, Grassmarket, and National Museum cluster.</li>
+                  <li><strong>Taxi use:</strong> Save taxi legs for uphill segments, Arthur's Seat access, or evening returns.</li>
+                  <li><strong>Transit:</strong> Buses and trams are useful for cross-city jumps such as Dean Village or Leith-side routes.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Return-to-Ship Timing</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Hard rule:</strong> Start return travel no later than 2 hours before final all-aboard time.</li>
+                  <li><strong>Weather margin:</strong> Add 20-30 minutes extra if rain/wind is expected.</li>
+                  <li><strong>Backup plan:</strong> Keep a taxi rank and ride-app option ready near your last attraction.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Attractions &amp; Sightseeing</summary>
+          <div class="london-section-body">
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Glasgow Cathedral</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Glasgow+Cathedral" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Glasgow+Cathedral&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Glasgow+Cathedral&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p><strong>Why go:</strong> Historic medieval cathedral with strong architecture and easy access from central routes.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Kelvingrove Art Gallery and Museum</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Kelvingrove+Art+Gallery+and+Museum+Glasgow" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Kelvingrove+Art+Gallery+and+Museum+Glasgow&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Kelvingrove+Art+Gallery+and+Museum+Glasgow&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Historic fortress with Crown Jewels, military history exhibits, and top city viewpoints.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Buchanan Street</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Buchanan+Street+Glasgow" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Buchanan+Street+Glasgow&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Buchanan+Street+Glasgow&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Main Old Town spine linking the castle to Holyrood, filled with closes, performers, and photo stops.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Palace of Holyroodhouse</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Official royal residence in Scotland with state apartments, abbey ruins, and calmer pacing than castle queues.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Arthur's Seat</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Short volcanic-hill hike with panoramic skyline and Firth views; best in dry weather and stable wind.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">National Museum of Scotland</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Large free museum perfect for weather backup, science/history collections, and rooftop city views.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Grassmarket</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Lively square below the castle with pubs, lunch stops, and easy links to Victoria Street.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+
+            <details class="london-section london-attraction-accordion">
+              <summary class="london-section-summary">Dean Village</summary>
+              <div class="london-section-body">
+                <article class="destination-card">
+                  <div class="london-action-bar">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
+                  </div>
+                  <details class="london-section london-section-overview" open>
+                    <summary class="london-section-summary">Overview</summary>
+                    <div class="london-section-body">
+                      <p>Quiet riverside neighborhood with historic stone houses and low-crowd photo opportunities.</p>
+                    </div>
+                  </details>
+                </article>
+              </div>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Food, Pubs &amp; Daily Life</summary>
+          <div class="london-section-body">
+            <details class="london-section">
+              <summary class="london-section-summary">Restaurant Recommendations</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>The Witchery by the Castle:</strong> Signature Edinburgh fine dining near the castle.</li>
+                  <li><strong>Makars Mash Bar:</strong> Scottish comfort food with quick central service.</li>
+                  <li><strong>Ondine:</strong> Seafood-focused option for a polished evening meal.</li>
+                  <li><strong>Mussel Inn:</strong> Reliable casual seafood stop for midday pacing.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Pub Recommendations</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>The Bow Bar:</strong> Strong whisky and cask ale selection in Old Town.</li>
+                  <li><strong>The Last Drop:</strong> Historic Grassmarket pub, useful near lunch routing.</li>
+                  <li><strong>Whiski Rooms:</strong> Royal Mile whisky list with convenient central location.</li>
+                  <li><strong>The Sheep Heid Inn:</strong> Classic pub setting if routing toward Holyrood side.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Daily Life Notes</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Book dinner windows around Tattoo or castle-close times to avoid peak queues.</li>
+                  <li>Carry a water bottle and quick snack for hill-based routes.</li>
+                  <li>Use this block for evolving food discoveries and same-day changes.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Glasgow Tips &amp; Practical Information</summary>
+          <div class="london-section-body">
+            <details class="london-section">
+              <summary class="london-section-summary">Practical Tips</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Footwear:</strong> Wear grip-friendly shoes for wet cobbles and stair-heavy closes.</li>
+                  <li><strong>Weather:</strong> Layer base + wind shell; conditions can shift rapidly even in summer.</li>
+                  <li><strong>Crowds:</strong> Enter top sights early and shift to museums or villages in late afternoon.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Emergency &amp; Essentials</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Emergency services:</strong> 999</li>
+                  <li><strong>Non-emergency NHS:</strong> 111</li>
+                  <li><strong>Police non-emergency:</strong> 101</li>
+                  <li><strong>ATM and pharmacy:</strong> Most available along Princes Street, Waverley, and Royal Mile corridor.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="london-section">
+              <summary class="london-section-summary">Trip Notes</summary>
+              <div class="london-section-body">
+                <textarea data-my-notes-key="edinburgh-practical-notes" rows="6" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add practical notes, weather updates, and return-to-ship reminders..."></textarea>
+              </div>
+            </details>
+          </div>
+        </details>
+      </section>
+
+      <section class="travel-journal">
+        <h2>📘 Today's Travel Story — Facebook Version</h2>
+        <p>Write the short version of today's adventure here — the story to share with friends.</p>
+        <textarea placeholder="Today's Facebook story..."></textarea>
+
+        <h2>✍️ Travel Journal — Book Version</h2>
+        <p>Write the longer version here — memories, people, history, funny moments, and details for the book.</p>
+        <textarea placeholder="Today's book version..."></textarea>
+      </section>
+
+      <section class="photo-gallery-collapsible">
+        <button type="button" class="button secondary gallery-toggle" aria-expanded="false">Beyond the Gangway Travel Photo Gallery</button>
+        <div class="gallery-content" aria-hidden="true">
+          <section class="overview-grid">
+            <article class="overview-card">
+              <button id="add-photo-btn" class="button" type="button">Add Photo</button>
+            </article>
+          </section>
+          <section class="photo-gallery">
+            <div id="photo-gallery-grid" class="photo-gallery-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page-actions">
+        <a class="button" href="index.html">Return to Dashboard</a>
+        <a class="button secondary" href="ports.html">Back to Ports Hub</a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Glasgow companion built from the approved Edinburgh structural template.</p>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

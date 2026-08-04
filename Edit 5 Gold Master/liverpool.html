@@ -1,0 +1,491 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b294a">
+  <title>Liverpool | Beyond the Gangway Travel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    main > section.overview-grid,
+    main > section.card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 0.55rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    main > section.overview-grid > article.overview-card,
+    main > section.card-grid > article.destination-card {
+      margin: 0;
+      height: 100%;
+      border-radius: 0.95rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    main > section + section {
+      margin-top: 0.1rem;
+    }
+
+    main > section.group-section {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+    }
+
+    .group-title {
+      margin: 0;
+      padding: 0.2rem 0.2rem 0.1rem;
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+      color: var(--accent-strong);
+    }
+
+    main details.london-section {
+      border-top: none;
+      padding-top: 0;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.018);
+      padding-inline: 0.5rem;
+    }
+
+    main details.london-section > .london-section-summary {
+      padding: 0.78rem 0.35rem;
+    }
+
+    main details.london-section > .london-section-body {
+      padding: 0.2rem 0.35rem 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      main > section.overview-grid,
+      main > section.card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      main {
+        gap: 0.95rem;
+      }
+
+      main > section.overview-grid,
+      main > section.card-grid {
+        padding: 0.4rem;
+        border-radius: 0.85rem;
+      }
+
+      main > section.group-section {
+        padding: 0.5rem;
+      }
+
+      .group-title {
+        font-size: 1rem;
+      }
+
+      main > section.overview-grid > article.overview-card,
+      main > section.card-grid > article.destination-card {
+        border-radius: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <a class="home-link" href="index.html">Beyond the Gangway Travel</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="london.html">London</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="liverpool.html" class="active">Liverpool</a>
+        <a href="dover.html">Dover</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <h1>Liverpool Travel Guide</h1>
+        <p class="subtitle">Liverpool city companion with cruise-port arrival planning, waterfront routing, and city-center walking flow for August 2026.</p>
+      </section>
+
+      <section class="overview-grid">
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Royal Albert Dock</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Albert+Dock+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Albert+Dock+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Albert+Dock+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-albert-dock-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-albert-dock-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-albert-dock-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-albert-dock-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="royal-albert-dock">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="royal-albert-dock">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="royal-albert-dock">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Waterfront anchor with museums, dining, and easy route planning for a smooth first block.</p>
+                </div>
+              </details>
+              <details class="london-section">
+                <summary class="london-section-summary">Suggested Visit Time</summary>
+                <div class="london-section-body">
+                  <p><strong>Suggested visit time:</strong> 60-120 minutes.</p>
+                </div>
+              </details>
+              <details class="london-section">
+                <summary class="london-section-summary">Plan Your Visit</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>Admission:</strong> Open public dock area; individual attractions vary.</li>
+                    <li><strong>Best Time to Visit:</strong> Early morning before peak foot traffic.</li>
+                    <li><strong>Walking Difficulty:</strong> Easy, mostly level waterfront paths.</li>
+                    <li><strong>Rain Alternative:</strong> Move into Beatles Story or Maritime Museum.</li>
+                  </ul>
+                </div>
+              </details>
+              <details id="royal-albert-dock-top-transit" class="london-section">
+                <summary class="london-section-summary">Getting There</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>From cruise arrival:</strong> Short walk or quick taxi depending dock position.</li>
+                    <li><strong>Bus option:</strong> Central waterfront routes are frequent.</li>
+                    <li><strong>Taxi option:</strong> Easiest for weather or timing pressure.</li>
+                  </ul>
+                </div>
+              </details>
+              <details id="royal-albert-dock-top-nearby" class="london-section london-section-nearby">
+                <summary class="london-section-summary">Nearby Attractions</summary>
+                <div class="london-section-body">
+                  <ul>
+                    <li><strong>The Beatles Story</strong> <span>On site</span></li>
+                    <li><strong>Maritime Museum</strong> <span>On site</span></li>
+                    <li><strong>Pier Head</strong> <span>10-minute walk</span></li>
+                  </ul>
+                </div>
+              </details>
+              <details id="royal-albert-dock-top-travel" class="london-section">
+                <summary class="london-section-summary">Travel Information</summary>
+                <div class="london-section-body">
+                  <p>Use this as your orientation base before moving inland to music or cathedral districts.</p>
+                </div>
+              </details>
+              <details class="london-section london-section-tips">
+                <summary class="london-section-summary">Travel Tips</summary>
+                <div class="london-section-body">
+                  <p>Start with dock photos first, then decide whether to continue to museums or Cavern area.</p>
+                  <textarea data-my-notes-key="royal-albert-dock-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Royal Albert Dock..."></textarea>
+                </div>
+              </details>
+              <details class="london-section london-section-frank-says">
+                <summary class="london-section-summary">Beyond the Gangway Perspective</summary>
+                <div class="london-section-body">
+                  <p>Low-stress and high-value start point for the whole Liverpool day.</p>
+                </div>
+              </details>
+              <details id="royal-albert-dock-top-gallery" class="london-section london-section-gallery">
+                <summary class="london-section-summary">Photo Gallery</summary>
+                <div class="london-section-body">
+                  <p>Open the full Liverpool photo gallery below to review and add trip photos.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </article>
+
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">The Beatles Story</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=The+Beatles+Story+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=The+Beatles+Story+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=The+Beatles+Story+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="beatles-story-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="beatles-story-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="beatles-story-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="beatles-story-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="the-beatles-story">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="the-beatles-story">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="the-beatles-story">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open>
+                <summary class="london-section-summary">Overview</summary>
+                <div class="london-section-body">
+                  <p>Signature Liverpool music-history attraction and excellent weather-safe anchor.</p>
+                </div>
+              </details>
+              <details class="london-section"><summary class="london-section-summary">Suggested Visit Time</summary><div class="london-section-body"><p><strong>Suggested visit time:</strong> 75-120 minutes.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li><strong>Admission:</strong> Ticketed entry recommended in peak periods.</li><li><strong>Best Time to Visit:</strong> Late morning or early afternoon.</li><li><strong>Walking Difficulty:</strong> Easy, primarily indoors.</li><li><strong>Rain Alternative:</strong> Strong primary indoor option.</li></ul></div></details>
+              <details id="beatles-story-top-transit" class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><ul><li><strong>From Royal Albert Dock:</strong> On-site adjacency.</li><li><strong>Bus option:</strong> Waterfront routes and short walk.</li><li><strong>Taxi option:</strong> Direct drop by dock entrances.</li></ul></div></details>
+              <details id="beatles-story-top-nearby" class="london-section london-section-nearby"><summary class="london-section-summary">Nearby Attractions</summary><div class="london-section-body"><ul><li><strong>Royal Albert Dock</strong> <span>On site</span></li><li><strong>Maritime Museum</strong> <span>On site</span></li><li><strong>Cavern Club</strong> <span>15-minute walk</span></li></ul></div></details>
+              <details id="beatles-story-top-travel" class="london-section"><summary class="london-section-summary">Travel Information</summary><div class="london-section-body"><p>Combine with dock attractions to reduce cross-city transitions.</p></div></details>
+              <details class="london-section london-section-tips"><summary class="london-section-summary">Travel Tips</summary><div class="london-section-body"><p>Book timed entry before arrival day for smoother routing.</p><textarea data-my-notes-key="beatles-story-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for The Beatles Story..."></textarea></div></details>
+              <details class="london-section london-section-frank-says"><summary class="london-section-summary">Beyond the Gangway Perspective</summary><div class="london-section-body"><p>Excellent indoor cultural block when weather turns.</p></div></details>
+              <details id="beatles-story-top-gallery" class="london-section london-section-gallery"><summary class="london-section-summary">Photo Gallery</summary><div class="london-section-body"><p>Open the full Liverpool photo gallery below to review and add trip photos.</p></div></details>
+            </div>
+          </details>
+        </article>
+
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Liverpool Cathedral</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Liverpool+Cathedral" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Liverpool+Cathedral&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Liverpool+Cathedral&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="liverpool-cathedral-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="liverpool-cathedral-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="liverpool-cathedral-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="liverpool-cathedral-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="liverpool-cathedral">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="liverpool-cathedral">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="liverpool-cathedral">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Grand interior architecture and elevated city perspective in the Hope Street district.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Suggested Visit Time</summary><div class="london-section-body"><p><strong>Suggested visit time:</strong> 60-90 minutes.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li><strong>Admission:</strong> Main cathedral access generally free; tower options may vary.</li><li><strong>Best Time to Visit:</strong> Midday to early afternoon.</li><li><strong>Walking Difficulty:</strong> Easy to moderate, some inclines nearby.</li><li><strong>Rain Alternative:</strong> Indoor heritage and museum route.</li></ul></div></details>
+              <details id="liverpool-cathedral-top-transit" class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><ul><li><strong>From city center:</strong> Walk via Hope Street or short taxi.</li><li><strong>Bus option:</strong> Frequent central routes nearby.</li><li><strong>Taxi option:</strong> Useful when preserving return margin.</li></ul></div></details>
+              <details id="liverpool-cathedral-top-nearby" class="london-section london-section-nearby"><summary class="london-section-summary">Nearby Attractions</summary><div class="london-section-body"><ul><li><strong>St Luke's Bombed Out Church</strong> <span>8-minute walk</span></li><li><strong>Metropolitan Cathedral</strong> <span>15-minute walk</span></li><li><strong>Cavern Club</strong> <span>15-minute drive</span></li></ul></div></details>
+              <details id="liverpool-cathedral-top-travel" class="london-section"><summary class="london-section-summary">Travel Information</summary><div class="london-section-body"><p>Best paired with Hope Street and one central-city music or civic landmark.</p></div></details>
+              <details class="london-section london-section-tips"><summary class="london-section-summary">Travel Tips</summary><div class="london-section-body"><p>Check opening times before climbing any tower segments.</p><textarea data-my-notes-key="liverpool-cathedral-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Liverpool Cathedral..."></textarea></div></details>
+              <details class="london-section london-section-frank-says"><summary class="london-section-summary">Beyond the Gangway Perspective</summary><div class="london-section-body"><p>Architectural scale and atmosphere make this one of Liverpool's must-see stops.</p></div></details>
+              <details id="liverpool-cathedral-top-gallery" class="london-section london-section-gallery"><summary class="london-section-summary">Photo Gallery</summary><div class="london-section-body"><p>Open the full Liverpool photo gallery below to review and add trip photos.</p></div></details>
+            </div>
+          </details>
+        </article>
+
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Cavern Club</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Cavern+Club+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cavern+Club+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cavern+Club+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="cavern-club-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="cavern-club-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="cavern-club-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="cavern-club-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="cavern-club">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="cavern-club">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="cavern-club">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Music-history icon in a compact central district with easy links to restaurants and shopping.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Suggested Visit Time</summary><div class="london-section-body"><p><strong>Suggested visit time:</strong> 45-90 minutes.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li><strong>Admission:</strong> Venue/event timing varies.</li><li><strong>Best Time to Visit:</strong> Late afternoon into evening.</li><li><strong>Walking Difficulty:</strong> Easy city-center walking.</li><li><strong>Rain Alternative:</strong> Excellent indoor option with nearby cafes.</li></ul></div></details>
+              <details id="cavern-club-top-transit" class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><ul><li><strong>From waterfront:</strong> 12-15 minute walk.</li><li><strong>Bus option:</strong> Central routes to city core.</li><li><strong>Taxi option:</strong> Quick cross-center transfer.</li></ul></div></details>
+              <details id="cavern-club-top-nearby" class="london-section london-section-nearby"><summary class="london-section-summary">Nearby Attractions</summary><div class="london-section-body"><ul><li><strong>St George's Hall</strong> <span>10-minute walk</span></li><li><strong>Liverpool ONE</strong> <span>10-minute walk</span></li><li><strong>Pier Head</strong> <span>12-minute walk</span></li></ul></div></details>
+              <details id="cavern-club-top-travel" class="london-section"><summary class="london-section-summary">Travel Information</summary><div class="london-section-body"><p>Great second-block stop after waterfront attractions.</p></div></details>
+              <details class="london-section london-section-tips"><summary class="london-section-summary">Travel Tips</summary><div class="london-section-body"><p>Pair this with dinner plans nearby for efficient evening pacing.</p><textarea data-my-notes-key="cavern-club-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Cavern Club..."></textarea></div></details>
+              <details class="london-section london-section-frank-says"><summary class="london-section-summary">Beyond the Gangway Perspective</summary><div class="london-section-body"><p>Compact area, strong atmosphere, and easy to weave into the day.</p></div></details>
+              <details id="cavern-club-top-gallery" class="london-section london-section-gallery"><summary class="london-section-summary">Photo Gallery</summary><div class="london-section-body"><p>Open the full Liverpool photo gallery below to review and add trip photos.</p></div></details>
+            </div>
+          </details>
+        </article>
+
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">Maritime Museum</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Merseyside+Maritime+Museum+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Merseyside+Maritime+Museum+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Merseyside+Maritime+Museum+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="maritime-museum-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="maritime-museum-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="maritime-museum-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="maritime-museum-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="maritime-museum">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="maritime-museum">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="maritime-museum">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Docklands maritime history stop with strong indoor flow and nearby attraction density.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Suggested Visit Time</summary><div class="london-section-body"><p><strong>Suggested visit time:</strong> 60-90 minutes.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li><strong>Admission:</strong> Check current museum policy by date.</li><li><strong>Best Time to Visit:</strong> Midday during weather shifts.</li><li><strong>Walking Difficulty:</strong> Easy indoor galleries.</li><li><strong>Rain Alternative:</strong> Primary docklands weather backup.</li></ul></div></details>
+              <details id="maritime-museum-top-transit" class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><ul><li><strong>From Royal Albert Dock:</strong> On site area.</li><li><strong>Bus option:</strong> Waterfront routes available.</li><li><strong>Taxi option:</strong> Useful for direct dock drop-off.</li></ul></div></details>
+              <details id="maritime-museum-top-nearby" class="london-section london-section-nearby"><summary class="london-section-summary">Nearby Attractions</summary><div class="london-section-body"><ul><li><strong>Royal Albert Dock</strong> <span>On site</span></li><li><strong>The Beatles Story</strong> <span>On site</span></li><li><strong>Museum of Liverpool</strong> <span>12-minute walk</span></li></ul></div></details>
+              <details id="maritime-museum-top-travel" class="london-section"><summary class="london-section-summary">Travel Information</summary><div class="london-section-body"><p>Easy to chain with other dock attractions before shifting to central Liverpool.</p></div></details>
+              <details class="london-section london-section-tips"><summary class="london-section-summary">Travel Tips</summary><div class="london-section-body"><p>Use this when wind or rain reduces waterfront comfort.</p><textarea data-my-notes-key="maritime-museum-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for Maritime Museum..."></textarea></div></details>
+              <details class="london-section london-section-frank-says"><summary class="london-section-summary">Beyond the Gangway Perspective</summary><div class="london-section-body"><p>Reliable indoor anchor that keeps the day moving.</p></div></details>
+              <details id="maritime-museum-top-gallery" class="london-section london-section-gallery"><summary class="london-section-summary">Photo Gallery</summary><div class="london-section-body"><p>Open the full Liverpool photo gallery below to review and add trip photos.</p></div></details>
+            </div>
+          </details>
+        </article>
+
+        <article class="destination-card">
+          <details class="london-section london-attraction-accordion">
+            <summary class="london-section-summary">St George's Hall</summary>
+            <div class="london-section-body">
+              <div class="london-action-bar">
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Hall+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=St+George%27s+Hall+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=St+George%27s+Hall+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="st-georges-hall-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="st-georges-hall-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="st-georges-hall-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="st-georges-hall-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="st-georges-hall">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="st-georges-hall">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="st-georges-hall">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
+              </div>
+              <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Major civic landmark with grand architecture near transport hubs and central shopping.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Suggested Visit Time</summary><div class="london-section-body"><p><strong>Suggested visit time:</strong> 45-75 minutes.</p></div></details>
+              <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li><strong>Admission:</strong> Event and tour access vary by schedule.</li><li><strong>Best Time to Visit:</strong> Late morning or before afternoon transfer planning.</li><li><strong>Walking Difficulty:</strong> Easy city-center walking.</li><li><strong>Rain Alternative:</strong> Strong architecture stop with nearby indoor options.</li></ul></div></details>
+              <details id="st-georges-hall-top-transit" class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><ul><li><strong>From Cavern area:</strong> 10-minute walk.</li><li><strong>Bus option:</strong> Major interchange nearby.</li><li><strong>Taxi option:</strong> Short central transfer.</li></ul></div></details>
+              <details id="st-georges-hall-top-nearby" class="london-section london-section-nearby"><summary class="london-section-summary">Nearby Attractions</summary><div class="london-section-body"><ul><li><strong>World Museum</strong> <span>2-minute walk</span></li><li><strong>Liverpool Central Library</strong> <span>2-minute walk</span></li><li><strong>Cavern Club</strong> <span>10-minute walk</span></li></ul></div></details>
+              <details id="st-georges-hall-top-travel" class="london-section"><summary class="london-section-summary">Travel Information</summary><div class="london-section-body"><p>Good transition point between waterfront, music district, and return route planning.</p></div></details>
+              <details class="london-section london-section-tips"><summary class="london-section-summary">Travel Tips</summary><div class="london-section-body"><p>Use this as a timing checkpoint before committing to final afternoon stops.</p><textarea data-my-notes-key="st-georges-hall-top-notes" rows="4" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add personal notes for St George's Hall..."></textarea></div></details>
+              <details class="london-section london-section-frank-says"><summary class="london-section-summary">Beyond the Gangway Perspective</summary><div class="london-section-body"><p>One of Liverpool's best civic architecture landmarks with easy route control.</p></div></details>
+              <details id="st-georges-hall-top-gallery" class="london-section london-section-gallery"><summary class="london-section-summary">Photo Gallery</summary><div class="london-section-body"><p>Open the full Liverpool photo gallery below to review and add trip photos.</p></div></details>
+            </div>
+          </details>
+        </article>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">📅 Planned Excursions</summary>
+          <div class="london-section-body">
+            <details class="london-section"><summary class="london-section-summary">Liverpool Overview</summary><div class="london-section-body"><ul><li><strong>Cruise context:</strong> Build your day around dock arrival timing and return buffer.</li><li><strong>City character:</strong> Waterfront ease plus compact central districts.</li><li><strong>Best rhythm:</strong> One docklands block and one central block.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Today's Plan</summary><div class="london-section-body"><ul><li><strong>Morning:</strong> Start at Royal Albert Dock and nearby museums.</li><li><strong>Midday:</strong> Move to Beatles/Cavern district for lunch and music history.</li><li><strong>Afternoon:</strong> Choose Cathedral or St George's Hall based on pace.</li><li><strong>Return:</strong> Keep a 75-minute safety buffer for ship return.</li></ul><div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;"><a class="button" href="todays-plan.html">Open Today's Plan</a><a class="button secondary" href="my-favorites.html">My Favorites</a></div></div></details>
+            <details class="london-section"><summary class="london-section-summary">Cruise Arrival Information</summary><div class="london-section-body"><ul><li><strong>Where Nieuw Statendam docks:</strong> Liverpool waterfront cruise arrival area.</li><li><strong>Distance into city core:</strong> Many primary attractions are walkable.</li><li><strong>Currency:</strong> GBP.</li><li><strong>Language:</strong> English.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Planned Tours &amp; Excursions</summary><div class="london-section-body"><ul><li>Waterfront heritage route.</li><li>Beatles and Cavern music-history route.</li><li>Cathedral and civic architecture route.</li><li>Flexible weather-based museum route.</li></ul></div></details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Transportation &amp; Getting Around</summary>
+          <div class="london-section-body">
+            <details class="london-section"><summary class="london-section-summary">Cruise Port to City Center</summary><div class="london-section-body"><ul><li><strong>Fastest:</strong> Walk or short taxi to first stop.</li><li><strong>Budget option:</strong> Public bus for cross-city repositioning.</li><li><strong>Timing:</strong> Central blocks can take longer than expected in crowds.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">City Mobility Strategy</summary><div class="london-section-body"><ul><li><strong>Walking core:</strong> Docklands, Cavern quarter, central halls.</li><li><strong>Taxi use:</strong> Useful for cathedral leg or compressed schedule.</li><li><strong>Transit:</strong> Bus routes connect waterfront to upper city areas.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Return-to-Ship Timing</summary><div class="london-section-body"><ul><li><strong>Hard rule:</strong> Start return 2 hours before all-aboard.</li><li><strong>Weather margin:</strong> Add 20-30 minutes buffer.</li><li><strong>Backup plan:</strong> Keep taxi fallback for final leg.</li></ul></div></details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Attractions &amp; Sightseeing</summary>
+          <div class="london-section-body">
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">Royal Albert Dock</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Albert+Dock+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Albert+Dock+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Albert+Dock+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Waterfront anchor for city orientation and easy route planning.</p></div></details></article></div></details>
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">The Beatles Story</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=The+Beatles+Story+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=The+Beatles+Story+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=The+Beatles+Story+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Music-history centerpiece and weather-safe attraction.</p></div></details></article></div></details>
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">Liverpool Cathedral</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=Liverpool+Cathedral" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Liverpool+Cathedral&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Liverpool+Cathedral&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Major heritage stop with strong interior scale and city perspective.</p></div></details></article></div></details>
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">Cavern Club</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=Cavern+Club+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cavern+Club+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cavern+Club+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Compact, iconic music district experience.</p></div></details></article></div></details>
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">Maritime Museum</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=Merseyside+Maritime+Museum+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Merseyside+Maritime+Museum+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Merseyside+Maritime+Museum+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Indoor maritime history stop in the docklands cluster.</p></div></details></article></div></details>
+            <details class="london-section london-attraction-accordion"><summary class="london-section-summary">St George's Hall</summary><div class="london-section-body"><article class="destination-card"><div class="london-action-bar"><a class="button" href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Hall+Liverpool" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=St+George%27s+Hall+Liverpool&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=St+George%27s+Hall+Liverpool&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a></div><details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p>Civic architecture landmark near major city transport links.</p></div></details></article></div></details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Food, Pubs &amp; Daily Life</summary>
+          <div class="london-section-body">
+            <details class="london-section"><summary class="london-section-summary">Restaurant Recommendations</summary><div class="london-section-body"><ul><li><strong>The Art School:</strong> Refined city-center dining.</li><li><strong>Mowgli:</strong> Popular casual Indian street-food style.</li><li><strong>Maray:</strong> Shareable plates with central location.</li><li><strong>Duke Street Market:</strong> Flexible mixed-vendor stop.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Pub Recommendations</summary><div class="london-section-body"><ul><li><strong>The Cavern Pub:</strong> Music-linked city-center stop.</li><li><strong>The Baltic Fleet:</strong> Traditional pub near docks.</li><li><strong>Ship &amp; Mitre:</strong> Broad beer selection.</li><li><strong>The Philharmonic Dining Rooms:</strong> Landmark pub interior.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Daily Life Notes</summary><div class="london-section-body"><ul><li>Docklands are easy walking, but inland blocks add time.</li><li>Keep one weather-proof museum option ready.</li><li>Cluster stops to avoid unnecessary backtracking.</li></ul></div></details>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Liverpool Tips &amp; Practical Information</summary>
+          <div class="london-section-body">
+            <details class="london-section"><summary class="london-section-summary">Practical Tips</summary><div class="london-section-body"><ul><li><strong>Footwear:</strong> Comfortable walking shoes for mixed dock and city surfaces.</li><li><strong>Weather:</strong> Carry a light shell for waterfront wind and rain shifts.</li><li><strong>Crowds:</strong> Start top sites early, then pivot indoors at peak times.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Emergency &amp; Essentials</summary><div class="london-section-body"><ul><li><strong>Emergency services:</strong> 999</li><li><strong>NHS non-emergency:</strong> 111</li><li><strong>Police non-emergency:</strong> 101</li><li><strong>ATM and pharmacy:</strong> Widely available in city-center corridors.</li></ul></div></details>
+            <details class="london-section"><summary class="london-section-summary">Trip Notes</summary><div class="london-section-body"><textarea data-my-notes-key="liverpool-practical-notes" rows="6" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add practical notes, weather updates, and return-to-ship reminders..."></textarea></div></details>
+          </div>
+        </details>
+      </section>
+
+      <section class="travel-journal">
+        <h2>📘 Today's Travel Story — Facebook Version</h2>
+        <p>Write the short version of today's adventure here — the story to share with friends.</p>
+        <textarea placeholder="Today's Facebook story..."></textarea>
+
+        <h2>✍️ Travel Journal — Book Version</h2>
+        <p>Write the longer version here — memories, people, history, funny moments, and details for the book.</p>
+        <textarea placeholder="Today's book version..."></textarea>
+      </section>
+
+      <section class="photo-gallery-collapsible">
+        <button type="button" class="button secondary gallery-toggle" aria-expanded="false">Beyond the Gangway Travel Photo Gallery</button>
+        <div class="gallery-content" aria-hidden="true">
+          <section class="overview-grid">
+            <article class="overview-card">
+              <button id="add-photo-btn" class="button" type="button">Add Photo</button>
+            </article>
+          </section>
+          <section class="photo-gallery">
+            <div id="photo-gallery-grid" class="photo-gallery-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page-actions">
+        <a class="button" href="index.html">Return to Dashboard</a>
+        <a class="button secondary" href="ports.html">Back to Ports Hub</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Liverpool companion built from the approved Edinburgh structural template.</p>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

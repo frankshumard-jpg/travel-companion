@@ -1,0 +1,549 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b294a">
+  <title>London | Beyond the Gangway Travel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    main > section.overview-grid,
+    main > section.card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 0.55rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    main > section.overview-grid > article.overview-card,
+    main > section.card-grid > article.destination-card {
+      margin: 0;
+      height: 100%;
+      border-radius: 0.95rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    main > section + section {
+      margin-top: 0.1rem;
+    }
+
+    main > section.group-section {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+    }
+
+    .group-title {
+      margin: 0;
+      padding: 0.2rem 0.2rem 0.1rem;
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+      color: var(--accent-strong);
+    }
+
+    main details.london-section {
+      border-top: none;
+      padding-top: 0;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.018);
+      padding-inline: 0.5rem;
+    }
+
+    main details.london-section > .london-section-summary {
+      padding: 0.78rem 0.35rem;
+    }
+
+    main details.london-section > .london-section-body {
+      padding: 0.2rem 0.35rem 0.7rem;
+    }
+
+    @media (max-width: 900px) {
+      main > section.overview-grid,
+      main > section.card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      main {
+        gap: 0.95rem;
+      }
+
+      main > section.overview-grid,
+      main > section.card-grid {
+        padding: 0.4rem;
+        border-radius: 0.85rem;
+      }
+
+      main > section.group-section {
+        padding: 0.5rem;
+      }
+
+      .group-title {
+        font-size: 1rem;
+      }
+
+      main > section.overview-grid > article.overview-card,
+      main > section.card-grid > article.destination-card {
+        border-radius: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <a class="home-link" href="index.html">Beyond the Gangway Travel</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="london.html" class="active">London</a>
+        <a href="shopping.html">Shopping</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="dover.html">Dover</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-intro">
+        <h1>London Travel Guide</h1>
+        <p class="subtitle">London Explorer with Big Bus route planning, route maps, stop-by-stop guidance, and Beyond the Gangway Travel personal travel notes for August 2026.</p>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Planned Excursions</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Day 1 Excursion Plan</summary>
+              <div class="london-section-body">
+                <p>Placeholder for Day 1 planned excursion details.</p>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Day 2 Excursion Plan</summary>
+              <div class="london-section-body">
+                <p>Placeholder for Day 2 planned excursion details.</p>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Day 3 Excursion Plan</summary>
+              <div class="london-section-body">
+                <p>Placeholder for Day 3 planned excursion details.</p>
+              </div>
+            </details>
+          </article>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Transportation & Getting Around</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section london-section-overview">
+              <summary class="london-section-summary">London Big Bus Explorer</summary>
+              <div class="london-section-body">
+                <p>Use the hop-on hop-off sightseeing network as a premium way to move between royal landmarks, historic squares and the Thames. Focus on the Red Route for classic Westminster sights, and the Blue Route for riverside views and Tower Bridge.</p>
+                <ul>
+                  <li><strong>Red Route:</strong> Buckingham Palace, Westminster, Trafalgar Square, Covent Garden and Tower of London.</li>
+                  <li><strong>Blue Route:</strong> Southbank, London Eye, St. Paul's Cathedral, Tower Bridge and Tower Hill.</li>
+                  <li><strong>Major stops:</strong> Buckingham Palace, Westminster, Trafalgar Square, Tower of London, Tower Bridge, St. Paul's Cathedral and London Eye.</li>
+                  <li><strong>Big Bus 48-hour plan:</strong> Start with the Red Route after arrival, then use the Blue Route the next day to round out key landmarks.</li>
+                </ul>
+                <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                  <a class="button" href="https://www.google.com/maps/dir/?api=1&origin=Buckingham+Palace+London&destination=Tower+of+London+London&travelmode=transit&waypoints=Westminster+Abbey+London|Trafalgar+Square+London" target="_blank" rel="noopener noreferrer">Red Route Map</a>
+                  <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&origin=Tower+of+London+London&destination=London+Eye+London&travelmode=transit&waypoints=St.+Paul%27s+Cathedral+London|Tower+Bridge+London" target="_blank" rel="noopener noreferrer">Blue Route Map</a>
+                  <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&origin=Westminster+Abbey+London&destination=Westminster+Abbey+London&travelmode=transit&waypoints=Big+Ben+London|Houses+of+Parliament+London|St+James%27s+Park+London" target="_blank" rel="noopener noreferrer">Westminster Loop</a>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Big Bus Navigator</summary>
+              <div class="london-section-body">
+                <p>Quick-launch Google Maps links for nearby stops, full stop discovery, and route planning while you are out in London.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Big+Bus+London+stop+near+me" target="_blank" rel="noopener noreferrer">&#x1F68C; Nearest Big Bus Stop</a>
+                  <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Big+Bus+Tours+London+stops" target="_blank" rel="noopener noreferrer">&#x1F4CD; Show All Big Bus Stops</a>
+                  <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&origin=Buckingham+Palace+London&destination=Tower+of+London+London&travelmode=transit&waypoints=Westminster+Abbey+London|Trafalgar+Square+London" target="_blank" rel="noopener noreferrer"><span style="color:#d94b4b;">&#x25CF;</span> Red Route Map</a>
+                  <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&origin=Tower+of+London+London&destination=London+Eye+London&travelmode=transit&waypoints=St.+Paul%27s+Cathedral+London|Tower+Bridge+London" target="_blank" rel="noopener noreferrer"><span style="color:#4f8ff7;">&#x25CF;</span> Blue Route Map</a>
+                  <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&origin=King%27s+Cross+St+Pancras+London&destination=Trafalgar+Square+London&travelmode=transit&waypoints=Russell+Square+London|Aldwych+London" target="_blank" rel="noopener noreferrer"><span style="color:#31a24c;">&#x25CF;</span> Green Route Map</a>
+                </div>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Maps</summary>
+              <div class="london-section-body">
+                <div class="widget card" style="padding:1rem;min-height:10rem;display:flex;align-items:center;justify-content:center;color:var(--muted);border-style:dashed;">
+                  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Westminster+London+route" target="_blank" rel="noopener noreferrer">Open Westminster Route in Google Maps</a>
+                </div>
+                <div class="widget card" style="margin-top:1rem;padding:1rem;min-height:10rem;display:flex;align-items:center;justify-content:center;color:var(--muted);border-style:dashed;">
+                  <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Soho+Covent+Garden+London" target="_blank" rel="noopener noreferrer">Open Soho & Covent Garden in Google Maps</a>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Rail Trip to Faversham</summary>
+              <div class="london-section-body">
+                <p><strong>Recommended outbound:</strong> Southeastern High Speed 07:20 from London St Pancras International to Faversham, arriving around 08:18 with a direct service via Canterbury West.</p>
+                <ul>
+                  <li><strong>Early morning options:</strong> 07:20, 07:50 and 08:20 departures are good choices for Wednesday, August 19, 2026.</li>
+                  <li><strong>Journey time:</strong> Approximately 58â€“60 minutes direct.</li>
+                  <li><strong>Frequency:</strong> High Speed trains run roughly every 30 minutes during the day.</li>
+                  <li><strong>Return train:</strong> Recommended Southeastern High Speed 18:02 from Faversham to St Pancras, arriving close to 19:00, or the 17:32 service for an earlier return.</li>
+                  <li><strong>Standard Class estimated fares:</strong> Â£26â€“Â£32 one-way; Â£52â€“Â£64 return.</li>
+                  <li><strong>First Class estimated fare:</strong> Â£45â€“Â£55 one-way when available.</li>
+                  <li><strong>Note:</strong> Prices vary depending on advance purchase, travel time and ticket type; book early for the best Standard Class price.</li>
+                  <li><strong>Booking references:</strong> Southeastern Railway â€” https://www.southeasternrailway.co.uk; National Rail Enquiries â€” https://www.nationalrail.co.uk.</li>
+                </ul>
+                <h4>Travel tips</h4>
+                <ul>
+                  <li>Buy tickets as soon as routes are confirmed to secure advance fares.</li>
+                  <li>Use the high-speed service from St Pancras rather than slower London termini for the fastest day trip.</li>
+                  <li>Plan to arrive at St Pancras at least 30 minutes before departure to allow for station navigation and platform changes.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Taxi & photo planning</summary>
+              <div class="london-section-body">
+                <p><strong>Hotel to station:</strong> The May Fair Hotel to London St Pancras International by taxi typically takes 25â€“35 minutes on a Wednesday morning via A401 / Euston Road.</p>
+                <ul>
+                  <li><strong>Estimated taxi time:</strong> 25â€“35 minutes before the morning rush begins.</li>
+                  <li><strong>Estimated taxi fare:</strong> Â£38â€“Â£45 in a London Black Cab, including central London charges and luggage; rideshare may be slightly lower.</li>
+                  <li><strong>Leave hotel:</strong> Aim for 06:40â€“06:45 for a 07:20 departure, giving 75â€“80 minutes door-to-door and time to reach the platform.</li>
+                </ul>
+                <div style="display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:1rem;">
+                  <div style="border:1px solid rgba(255,215,0,0.22); border-radius:18px; padding:1rem; background:rgba(255,255,255,0.03);">
+                    <div style="min-height:12rem; border:1px dashed rgba(255,215,0,0.45); border-radius:16px; background:rgba(255,255,255,0.01);"></div>
+                    <div style="min-height:1.5rem; margin-top:0.75rem; border-bottom:1px dashed rgba(255,255,255,0.18);"></div>
+                    <div style="min-height:4rem; margin-top:0.75rem; border:1px dashed rgba(255,255,255,0.14); border-radius:14px;"></div>
+                  </div>
+                  <div style="border:1px solid rgba(255,215,0,0.22); border-radius:18px; padding:1rem; background:rgba(255,255,255,0.03);">
+                    <div style="min-height:12rem; border:1px dashed rgba(255,215,0,0.45); border-radius:16px; background:rgba(255,255,255,0.01);"></div>
+                    <div style="min-height:1.5rem; margin-top:0.75rem; border-bottom:1px dashed rgba(255,255,255,0.18);"></div>
+                    <div style="min-height:4rem; margin-top:0.75rem; border:1px dashed rgba(255,255,255,0.14); border-radius:14px;"></div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Attractions & Sightseeing</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Attractions details</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Buckingham Palace</strong> â€“ Entry 09:30, 90 min, nearest Tube: Green Park.</li>
+                  <li><strong>Westminster Abbey</strong> â€“ Open 09:30â€“15:30, 90 min, nearest Tube: Westminster.</li>
+                  <li><strong>Big Ben & Parliament</strong> â€“ Exterior viewing, 45 min, nearest Tube: Westminster.</li>
+                  <li><strong>Churchill War Rooms</strong> â€“ Open 09:30â€“18:00, 90 min, nearest Tube: Westminster.</li>
+                  <li><strong>Tower of London</strong> â€“ Open 09:00â€“17:30, 120 min, nearest Tube: Tower Hill.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Don't Miss This</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Horse Guards Parade:</strong> Don't walk past this royal ceremony locationâ€”it is quieter than the palace and gives a great close-up of mounted guards and historic barracks.</li>
+                  <li><strong>Hidden photo opportunity:</strong> The Victoria Memorial walkway gives a palace-front photo with the memorial and flags in frame.</li>
+                  <li><strong>Royal route:</strong> A short walk from Buckingham Palace to Westminster through St. James's Park keeps the route scenic and historically rich.</li>
+                  <li><strong>Historic stop:</strong> The pedestrian path along the Thames at St. Katharine Docks offers iconic Tower Bridge reflection shots with fewer crowds.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">St. Paul's Cathedral â€” Nearby Information</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Best nearby pub:</strong> Ye Olde Watling.</li>
+                  <li><strong>Best nearby fish & chips:</strong> Golden Fish Bar (Fleet Street area).</li>
+                  <li><strong>Nearest public restroom (if known):</strong> Cathedral facilities and One New Change restrooms.</li>
+                </ul>
+                <h4>While You're Here â€” St. Paul's Cathedral (within a 10-minute walk)</h4>
+                <ul>
+                  <li>Millennium Bridge.</li>
+                  <li>One New Change rooftop view.</li>
+                  <li>Paternoster Square.</li>
+                </ul>
+                <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+                  <a class="button" href="https://www.google.com/maps/search/?api=1&query=St+Paul%27s+Cathedral+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                  <a class="button secondary" data-walk-big-bus="true" href="https://www.google.com/maps/dir/?api=1&origin=St+Paul%27s+Cathedral+London&destination=Big+Bus+Stop+St+Paul%27s+Cathedral+London&travelmode=walking" target="_blank" rel="noopener noreferrer">ðŸšŒ Walk to Big Bus Stop</a>
+                </div>
+              </div>
+            </details>
+          </article>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Beyond the Gangway Travel Travel Journal</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Beyond the Gangway Travel Personal Notes</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li><strong>Mayfair Hotel location:</strong> A premium London base central to Westminster, royal sights and evening dining.</li>
+                  <li><strong>Walking routes:</strong> Buckingham Palace â†’ St. James's Park â†’ Westminster â†’ Trafalgar Square â†’ Covent Garden for a polished first-day loop.</li>
+                  <li><strong>Nearby pubs:</strong> The Punch Bowl, The Audley Public House and The Footman are ideal post-sightseeing stops near the hotel.</li>
+                  <li><strong>Coffee stops:</strong> Claridge's Bar, Monocle CafÃ© or a local espresso spot for a quick London recharge.</li>
+                  <li><strong>WWII connections:</strong> Note the Churchill War Rooms, the Palace's Blitz history, and the survival of St. Paul's Cathedral as travel themes.</li>
+                  <li><strong>Family travel notes:</strong> Use this section to record weather, transport notes, changes and favourite moments as the day unfolds.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Frank's Notes</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Confirm Changing of the Guard time the night before.</li>
+                  <li>Book Westminster Abbey tickets in advance.</li>
+                  <li>Use Big Bus first day for orientation.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="card-grid">
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Beyond the Gangway Travel Planned Tour</summary>
+              <div class="london-section-body">
+                <p><strong>London â€” August 20, 2026</strong></p>
+                <p><strong>Tour:</strong> Buckingham Palace Tour</p>
+                <p><strong>Time:</strong> 10:15 AM</p>
+                <p><strong>Includes:</strong> Changing of the Guard; Changing of the Horse Guards</p>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="photo-gallery-collapsible">
+          <button type="button" class="button secondary gallery-toggle" aria-expanded="false">Beyond the Gangway Travel Photo Gallery</button>
+          <div class="gallery-content" aria-hidden="true">
+            <section class="overview-grid">
+              <article class="overview-card">
+                <button id="add-photo-btn" class="button" type="button">Add Photo</button>
+              </article>
+            </section>
+            <section class="photo-gallery">
+              <div id="photo-gallery-grid" class="photo-gallery-grid"></div>
+            </section>
+          </div>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Food, Pubs & Daily Life</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Restaurant Recommendations</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Dishoom Covent Garden â€“ Indian brunch favorites.</li>
+                  <li>Rules London â€“ Classic British dining in Mayfair.</li>
+                  <li>Flat Iron â€“ Steakhouse for a reliable dinner.</li>
+                  <li>Hawksmoor Seven Dials â€“ Great for relaxed group meals.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Pub Recommendations</summary>
+              <div class="london-section-body">
+                <p>These pubs were selected because they are excellent local pubs within walking distance of The May Fair Hotelâ€”not simply the most famous tourist pubs.</p>
+                <ul>
+                  <li><strong>The Punch Bowl</strong> â€“ 8 min walk. Worth visiting for its classic small-plate menu and quiet Mayfair atmosphere. Signature: smoked cod croquettes and local ales. Typical atmosphere: relaxed, with a polished neighbourhood pub feel. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Punch+Bowl+Mayfair+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.5/5</li>
+                  <li><strong>The Guinea Grill</strong> â€“ 9 min walk. Famous for its exceptional grilled steak and traditional English pub dining. Signature: porterhouse steak. Typical atmosphere: lively but intimate, with a strong local crowd. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Guinea+Grill+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.7/5</li>
+                  <li><strong>The Audley Public House</strong> â€“ 3 min walk. A charming pub right in the heart of Mayfair with classic pints and a refined feel. Signature: fish pie and artisan beers. Typical atmosphere: elegant and welcoming, ideal for a first drink after hotel arrival. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Audley+Public+House+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.6/5</li>
+                  <li><strong>The Footman</strong> â€“ 4 min walk. Cozy and traditional, this pub is known for excellent service and well-kept ales. Signature: Sunday roast and craft beers. Typical atmosphere: friendly, local, and understated. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Footman+Mayfair+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.4/5</li>
+                  <li><strong>The Market Tavern</strong> â€“ 11 min walk. Great for a Mayfair blend of British pub food and contemporary cocktails. Signature: beer-battered fish and chips. Typical atmosphere: modern comfort with a neighbourhood vibe. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Market+Tavern+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.3/5</li>
+                  <li><strong>Coach & Horses</strong> â€“ 7 min walk. Known for its polished pub dining in a historic setting. Signature: steak and ale pie. Typical atmosphere: classic and clubby, good for a relaxed evening. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Coach+and+Horses+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.4/5</li>
+                  <li><strong>The Windmill</strong> â€“ 12 min walk. A well-regarded traditional pub in the Covent Garden fringe, perfect for pre-theatre drinks. Signature: pork belly and signature cocktails. Typical atmosphere: convivial and buzzy, with a strong local theatre crowd. Google Maps: <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=The+Windmill+Covent+Garden+London" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>. Frank's rating: 4.5/5</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">London Tips & Practical Information</summary>
+          <div class="london-section-body">
+        <section class="overview-grid">
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Emergency numbers</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Emergency services: 999</li>
+                  <li>Non-emergency police: 101</li>
+                  <li>UK medical advice: 111</li>
+                  <li>Hotel front desk: The May Fair Hotel reception</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Money Saving Tips</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Use contactless payment for Tube and buses.</li>
+                  <li>Walk between nearby attractions to save on taxis.</li>
+                  <li>Book tickets online before arrival to avoid queues.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+        <section class="card-grid">
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">London Etiquette</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Stand on the right on escalators.</li>
+                  <li>Queue politely for buses and tickets.</li>
+                  <li>Keep voices low on public transport.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="destination-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Public Restrooms</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>St. James's Park Visitor Centre</li>
+                  <li>Trafalgar Square public facilities</li>
+                  <li>Covent Garden shopping arcade restrooms</li>
+                  <li>London Eye and Southbank Centre</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Pharmacy Locations</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Boots, Piccadilly Circus</li>
+                  <li>Boots, Covent Garden</li>
+                  <li>Lloyds Pharmacy, Westminster</li>
+                  <li>Superdrug, Leicester Square</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          <article class="overview-card">
+            <details class="london-section">
+              <summary class="london-section-summary">Packing Reminder</summary>
+              <div class="london-section-body">
+                <ul>
+                  <li>Umbrella or lightweight rain jacket</li>
+                  <li>Comfortable walking shoes</li>
+                  <li>Travel card / contactless bank card</li>
+                  <li>Phone charger and UK adapter</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+        </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="travel-journal">
+        <h2>📘 Today's Travel Story — Facebook Version</h2>
+        <p>Write the short version of today's adventure here — the story to share with friends.</p>
+        <textarea placeholder="Today's Facebook story..."></textarea>
+
+        <h2>✍️ Travel Journal — Book Version</h2>
+        <p>Write the longer version here — memories, people, history, funny moments, and details for the book.</p>
+        <textarea placeholder="Today's book version..."></textarea>
+      </section>
+
+      <section class="page-actions"><section class="page-actions">
+        <a class="button" href="index.html">Return to Dashboard</a>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>London travel guide optimized for Beyond the Gangway Travel real itinerary.</p>
+    </footer>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
