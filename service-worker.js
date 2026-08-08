@@ -1,10 +1,9 @@
-﻿const CACHE_NAME = 'travel-companion-v20';
+﻿const CACHE_NAME = 'travel-companion-v21';
 const ASSETS = [
   './',
   './index.html',
   './london.html',
   './shopping.html',
-  './faversham.html',
   './edinburgh.html',
   './cruise.html',
   './dover.html',

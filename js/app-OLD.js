@@ -6073,25 +6073,14 @@ function initializeDestinationTravelSections() {
     const gettingThereId = `${safeSlug}-getting-there-${index + 1}`;
     const plannedVisitId = `${safeSlug}-our-planned-visit-${index + 1}`;
 
-    if (actionBar && photoButton) {
-      const existingTravelButton = Array.from(actionBar.querySelectorAll('button')).find(
-        (button) => button.textContent.trim().includes('Travel Information')
-      );
+    if (actionBar && photoButton && !actionBar.querySelector(`button[data-london-toggle-target="${gettingThereId}"]`)) {
+      const gettingButton = document.createElement('button');
+      gettingButton.type = 'button';
+      gettingButton.className = 'button secondary';
+      gettingButton.setAttribute('data-london-toggle-target', gettingThereId);
+      gettingButton.textContent = '🧭 Travel Information';
 
-      if (existingTravelButton) {
-        existingTravelButton.setAttribute('data-london-toggle-target', gettingThereId);
-      } else {
-        const gettingButton = document.createElement('button');
-        gettingButton.type = 'button';
-        gettingButton.className = 'button secondary';
-        gettingButton.setAttribute('data-london-toggle-target', gettingThereId);
-        gettingButton.textContent = '🧭 Travel Information';
-        actionBar.insertBefore(gettingButton, photoButton);
-      }
-
-      // Edinburgh Gold Standard: Photo Gallery is always the full-width final row.
-      photoButton.style.gridColumn = '1 / -1';
-      photoButton.style.width = '100%';
+      actionBar.insertBefore(gettingButton, photoButton);
     }
 
     const galleryDetails = card.querySelector('details.london-section-gallery');
