@@ -444,7 +444,6 @@ function observeTextareaChanges() {
 
 
 
-}
 window.addEventListener('load', () => {
   ensureGlobalSyncPanel();
   bindAllTextareas();
