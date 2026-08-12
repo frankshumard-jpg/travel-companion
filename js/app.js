@@ -35,6 +35,7 @@ function updateWeather() {
     london: 'Cloudy 18°C',
     edinburgh: 'Light rain 14°C',
     dover: 'Sunny 19°C',
+    faversham: 'Partly cloudy 17°C',
     cruise: 'Calm seas 22°C',
     shopping: 'Light showers 16°C'
   };
@@ -114,6 +115,7 @@ function enforceExternalLinksInNewTab() {
 
 const destinationPages = new Set([
   'london.html',
+  'faversham.html',
   'edinburgh.html',
   'inverness.html',
   'portree.html',
@@ -528,7 +530,8 @@ function classifyDestinationBlock(title) {
     text.includes('taxi') ||
     text.includes('maps') ||
     text.includes('navigation') ||
-    text.includes('tattoo logistics')
+    text.includes('tattoo logistics') ||
+    text.includes('rail trip to faversham')
   ) {
     return 'gettingAround';
   }
@@ -553,6 +556,9 @@ function classifyDestinationBlock(title) {
     text.includes('attractions details') ||
     text.includes("don't miss this") ||
     text.includes('walking tour') ||
+    text.includes('market place') ||
+    text.includes('faversham creek') ||
+    text.includes('shepherd neame brewery') ||
     text.includes('cobh connection') ||
     text.includes('cobh heritage centre') ||
     text.includes('blarney castle') ||
@@ -1465,13 +1471,10 @@ function buildMapsSearchUrl(query, placeId) {
 function buildTransitDirectionsUrl(origin, destination, transitMode) {
   const params = new URLSearchParams({
     api: '1',
+    origin,
     destination,
     travelmode: 'transit'
   });
-
-  if (origin) {
-    params.set('origin', origin);
-  }
 
   if (transitMode) {
     params.set('transit_mode', transitMode);
@@ -2313,7 +2316,7 @@ function estimateTravelMinutesFromStop(previousKey, currentKey) {
 
 function formatEstimatedTravel(previousKey, currentKey) {
   if (!previousKey) {
-    return 'First stop: use live navigation time';
+    return 'From hotel: about 15-25 min';
   }
 
   const minutes = estimateTravelMinutesFromStop(previousKey, currentKey);
@@ -2330,53 +2333,6 @@ function buildLondonAttractionButton(label, href, extraClass = '', dataAttribute
 
 function buildLondonToggleButton(label, targetId) {
   return `<button type="button" class="button secondary" data-london-toggle-target="${targetId}">${label}</button>`;
-}
-
-function normalizeLondonTransitStep(step, title) {
-  const pageName = (window.location.pathname.split('/').pop() || '').toLowerCase();
-  if (pageName !== 'london.html') {
-    return step;
-  }
-
-  if (step === 'Walk from The May Fair Hotel to Green Park station.') {
-    if ((title || '').toLowerCase().includes('tube')) {
-      return 'Use "Navigate From Here" for the best live route from your current location to the most practical Tube or rail connection for this attraction.';
-    }
-
-    return 'Use "Navigate From Here" for the best live route from your current location to the most practical bus connection for this attraction.';
-  }
-
-  if (step === 'Alternatively walk directly from Mayfair through St James\'s.') {
-    return 'If you are already nearby, walking can also be a practical option.';
-  }
-
-  if (/^Estimated travel time:/i.test(step)) {
-    return 'Use "Navigate From Here" for live travel time based on your current location and current conditions.';
-  }
-
-  return step;
-}
-
-function normalizeLondonTransitFare(fare) {
-  const pageName = (window.location.pathname.split('/').pop() || '').toLowerCase();
-  if (pageName !== 'london.html') {
-    return fare;
-  }
-
-  if (fare === 'Current contactless/Oyster fare: not required if walking directly from Mayfair.') {
-    return 'Current contactless/Oyster fare: not required if you are already within comfortable walking distance.';
-  }
-
-  return fare;
-}
-
-function normalizeLondonTaxiTime(time) {
-  const pageName = (window.location.pathname.split('/').pop() || '').toLowerCase();
-  if (pageName !== 'london.html') {
-    return time;
-  }
-
-  return 'Travel time depends on your starting point and live traffic; use "Navigate From Here" for a live estimate.';
 }
 
 function splitLondonBullet(text) {
@@ -2477,14 +2433,12 @@ function buildLondonDetailList(items) {
 }
 
 function buildLondonTransitOption(title, steps, fare, routeHref) {
-  const normalizedSteps = steps.map((step) => normalizeLondonTransitStep(step, title));
-  const normalizedFare = normalizeLondonTransitFare(fare);
   return `
     <details class="london-subsection">
       <summary class="london-subsection-summary">${title}</summary>
       <div class="london-section-body">
-        ${buildLondonDetailList(normalizedSteps)}
-        <p><strong>${normalizedFare}</strong></p>
+        ${buildLondonDetailList(steps)}
+        <p><strong>${fare}</strong></p>
         <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem;">
           ${buildLondonAttractionButton('Open Transit Route in Google Maps', routeHref)}
         </div>
@@ -2499,51 +2453,13 @@ function buildLondonNearbyItem(originQuery, nearby) {
   return `<li><strong>${nearby.name}</strong> <span>${nearby.time}</span><div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.35rem;">${buildLondonAttractionButton('📍 Google Maps', mapsHref)}${buildLondonAttractionButton('🚶 Walk There', walkHref, 'secondary')}</div></li>`;
 }
 
-function getTravelerStartingLocationOrigin() {
-  try {
-    const rawProfile = localStorage.getItem('travelCompanion.travelerProfile.v1');
-    if (rawProfile) {
-      const profile = JSON.parse(rawProfile);
-      const startingLocation = profile?.startingLocation || {};
-      const origin = [
-        startingLocation.name,
-        startingLocation.streetAddress,
-        startingLocation.city,
-        startingLocation.country
-      ].filter((value) => typeof value === 'string' && value.trim()).join(', ');
-
-      if (origin) {
-        return origin;
-      }
-    }
-  } catch (error) {
-    console.warn('Unable to load traveler profile origin:', error);
-  }
-
-  try {
-    const rawLondonOrigin = localStorage.getItem('london.startingLocation.v1');
-    if (!rawLondonOrigin) {
-      return '';
-    }
-
-    const londonOrigin = JSON.parse(rawLondonOrigin);
-    return [londonOrigin?.locationName, londonOrigin?.streetAddress]
-      .filter((value) => typeof value === 'string' && value.trim())
-      .join(', ');
-  } catch (error) {
-    console.warn('Unable to load London starting location origin:', error);
-    return '';
-  }
-}
-
 function buildLondonAttractionCard(template) {
   const attractionQuery = template.googleMapsQuery || template.title;
   const attractionMaps = buildMapsSearchUrl(attractionQuery);
-  const travelerOrigin = getTravelerStartingLocationOrigin();
-  const walkThere = buildWalkingDirectionsUrl(travelerOrigin, attractionQuery);
+  const walkThere = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=walking`;
   const gpsNavigate = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=walking&dir_action=navigate`;
-  const tubeRoute = buildTransitDirectionsUrl(travelerOrigin, attractionQuery, 'subway');
-  const busRoute = buildTransitDirectionsUrl(travelerOrigin, attractionQuery, 'bus');
+  const tubeRoute = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=transit&transit_mode=subway`;
+  const busRoute = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=transit&transit_mode=bus`;
   const templateKey = template.key;
   const personalMeta = londonPersonalMetadata[templateKey] || {};
   const foodLinks = personalMeta.food || {
@@ -2570,8 +2486,8 @@ function buildLondonAttractionCard(template) {
   const featuredExperiences = (template.featuredExperiences || []).map((experience) => {
     const locationQuery = experience.mapsQuery || experience.title;
     const experienceMaps = buildMapsSearchUrl(locationQuery);
-    const experienceWalk = buildWalkingDirectionsUrl(travelerOrigin, locationQuery);
-    const experienceTransit = buildTransitDirectionsUrl(travelerOrigin, locationQuery, 'transit');
+    const experienceWalk = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(locationQuery)}&travelmode=walking`;
+    const experienceTransit = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(locationQuery)}&travelmode=transit`;
     const nearbyItems = (experience.nearby || [])
       .map((nearby) => buildLondonNearbyItem(locationQuery, nearby))
       .join('');
@@ -2647,6 +2563,7 @@ function buildLondonAttractionCard(template) {
         ${buildLondonAttractionButton('📌 Start GPS Navigation', gpsNavigate, 'secondary')}
         ${buildLondonToggleButton('🚌 Transit Options', transitId)}
         ${buildLondonToggleButton('⭐ Nearby Attractions', nearbyId)}
+        ${buildLondonToggleButton('📷 Photo Gallery', galleryId)}
       </div>
       <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
         <button type="button" class="button secondary" data-add-to-today-plan="${templateKey}">➕ Add to Today's Plan</button>
@@ -2693,7 +2610,7 @@ function buildLondonAttractionCard(template) {
       </details>
 
       <details id="${transitId}" class="london-section london-section-transit">
-        ${buildLondonSectionSummary('Getting There')}
+        ${buildLondonSectionSummary('🏨 Getting There from The May Fair Hotel')}
         <div class="london-section-body">
           ${buildLondonTransitOption(template.tube.title, template.tube.steps, template.tube.fare, tubeRoute)}
           ${buildLondonTransitOption(template.bus.title, template.bus.steps, template.bus.fare, busRoute)}
@@ -2714,7 +2631,7 @@ function buildLondonAttractionCard(template) {
             <summary class="london-subsection-summary">${template.taxi.title}</summary>
             <div class="london-section-body">
               <p><strong>${template.taxi.fare}</strong></p>
-              <p><strong>${normalizeLondonTaxiTime(template.taxi.time)}</strong></p>
+              <p><strong>${template.taxi.time}</strong></p>
             </div>
           </details>
         </div>
@@ -3814,7 +3731,7 @@ function initializeLondonBeforeYouGoBriefing() {
     'nordfjordeid.html': 'Nieuw Statendam Nordfjordeid cruise berth',
     'alesund.html': 'Nieuw Statendam Alesund cruise berth'
   };
-  const hotelName = pageName === 'london.html' ? getTravelerStartingLocationOrigin() : shipPlanningOriginByPage[pageName];
+  const hotelName = pageName === 'london.html' ? 'The May Fair Hotel' : shipPlanningOriginByPage[pageName];
   const defaultArrivalMinutes = pageName === 'london.html' ? 10 * 60 : 9 * 60 + 30;
   const walkingMinutesByKey = pageName === 'london.html' ? {
     'buckingham palace': 15,
@@ -6073,25 +5990,14 @@ function initializeDestinationTravelSections() {
     const gettingThereId = `${safeSlug}-getting-there-${index + 1}`;
     const plannedVisitId = `${safeSlug}-our-planned-visit-${index + 1}`;
 
-    if (actionBar && photoButton) {
-      const existingTravelButton = Array.from(actionBar.querySelectorAll('button')).find(
-        (button) => button.textContent.trim().includes('Travel Information')
-      );
+    if (actionBar && photoButton && !actionBar.querySelector(`button[data-london-toggle-target="${gettingThereId}"]`)) {
+      const gettingButton = document.createElement('button');
+      gettingButton.type = 'button';
+      gettingButton.className = 'button secondary';
+      gettingButton.setAttribute('data-london-toggle-target', gettingThereId);
+      gettingButton.textContent = '🧭 Travel Information';
 
-      if (existingTravelButton) {
-        existingTravelButton.setAttribute('data-london-toggle-target', gettingThereId);
-      } else {
-        const gettingButton = document.createElement('button');
-        gettingButton.type = 'button';
-        gettingButton.className = 'button secondary';
-        gettingButton.setAttribute('data-london-toggle-target', gettingThereId);
-        gettingButton.textContent = '🧭 Travel Information';
-        actionBar.insertBefore(gettingButton, photoButton);
-      }
-
-      // Edinburgh Gold Standard: Photo Gallery is always the full-width final row.
-      photoButton.style.gridColumn = '1 / -1';
-      photoButton.style.width = '100%';
+      actionBar.insertBefore(gettingButton, photoButton);
     }
 
     const galleryDetails = card.querySelector('details.london-section-gallery');
@@ -6100,40 +6006,13 @@ function initializeDestinationTravelSections() {
     }
 
     if (!card.querySelector(`#${gettingThereId}`)) {
-      const gettingThereHtml = pageName === 'london.html'
-        ? `
-        <p><strong>📍 Navigate From Here</strong></p>
-        <p><a class="button" href="${navigateHref}" target="_blank" rel="noopener noreferrer">Navigate From Here</a></p>
-
-        <p><strong>📍 Getting There</strong></p>
-        <ul>
-          <li>Tap "Navigate From Here" for personalized walking, driving, transit, or rideshare directions from your current location.</li>
-          <li><strong>Nearest Tube / Metro Station:</strong> ${nearestTube}</li>
-          <li><strong>Nearest Bus Stop:</strong> ${nearestBus}</li>
-          <li><strong>Typical Taxi Information:</strong> ${fallback.taxiFare}. Actual cost depends on traffic and your starting point.</li>
-          <li><strong>Local Transportation Tip:</strong> ${fallback.transitNotes}</li>
-          <li><strong>Hop-On Hop-Off:</strong> Nearest Big Bus area: ${nearestBus}. Use the stop finder below when this attraction fits your route.</li>
-        </ul>
-
-        <p><strong>🚕 Taxi / Rideshare</strong></p>
-        <p>Use "Navigate From Here" for live travel time and route options based on your current location.</p>
-        <p>${fallback.rideshare}</p>
-
-        <p><strong>🚌 Public Transportation</strong></p>
-        <p><strong>Best option:</strong> ${fallback.transitBest}</p>
-        <p><strong>Nearest stop:</strong> ${fallback.transitStop}</p>
-        <p><strong>Estimated fare:</strong> ${fallback.transitFare}</p>
-        <p><strong>Boarding notes:</strong> ${fallback.transitNotes}</p>
-
-        ${bigBusSectionHtml}
-      `
-        : `
+      const gettingThereHtml = `
         <p><strong>📍 Navigate From Here</strong></p>
         <p><a class="button" href="${navigateHref}" target="_blank" rel="noopener noreferrer">Navigate From Here</a></p>
 
         <p><strong>Travel Information Summary</strong></p>
         <ul>
-          <li><strong>Approximate walking time:</strong> ${fallback.walkTime}</li>
+          <li><strong>Walking time from The May Fair Hotel:</strong> ${fallback.walkTime}</li>
           <li><strong>Transit time:</strong> ${fallback.transitTime}</li>
           <li><strong>Nearest Tube station:</strong> ${nearestTube}</li>
           <li><strong>Nearest bus stop:</strong> ${nearestBus}</li>
@@ -6210,15 +6089,7 @@ function initializeLondonAccordionButtons() {
 
       const isGalleryTarget = target.classList.contains('london-section-gallery') || targetId.endsWith('-gallery');
       if (isGalleryTarget) {
-        const galleryToggle = document.querySelector('.gallery-toggle');
-        const galleryContent = document.querySelector('.gallery-content');
-        const isCollapsed = galleryToggle?.getAttribute('aria-expanded') !== 'true';
-
-        if (isCollapsed && galleryToggle) {
-          galleryToggle.click();
-        }
-
-        galleryContent?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.open = !target.open;
         return;
       }
 

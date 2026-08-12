@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -28,17 +28,19 @@
 		.hero-subtitle{margin-top:6px;font-size:1.02rem;opacity:0.95}
 		.site-header::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(6,30,54,0.72) 0%, rgba(11,57,94,0.18) 45%, rgba(11,57,94,0.02) 70%);z-index:0;pointer-events:none}
 		.site-header::after{display:none}
-		/* Large rounded nav buttons with icons */
-		nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:14px 12px}
-		nav a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,0.1);color:#eef4ff;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);border:1px solid rgba(255,255,255,0.14);transition:transform .16s ease,box-shadow .16s ease}
-		nav a:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(0,0,0,.24);background:rgba(255,255,255,0.16)}
+		/* Large stacked nav buttons with compass icon */
+		nav{display:flex;flex-direction:column;align-items:center;gap:14px;padding:18px 12px;max-width:1100px;margin:0 auto}
+		nav a{display:flex;align-items:center;gap:14px;width:min(100%,980px);min-height:64px;padding:14px 18px;border-radius:18px;background:linear-gradient(180deg,rgba(11,41,74,0.98),rgba(8,30,56,0.98));color:#eef4ff;font-weight:800;font-size:1.18rem;line-height:1.2;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(242,189,69,0.35);transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
+		nav a:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgba(0,0,0,.32);background:linear-gradient(180deg,rgba(14,51,90,0.98),rgba(10,35,65,0.98))}
+		nav a img{width:26px;height:26px;flex:0 0 26px;display:block}
+		nav a .nav-label{display:block}
 		/* Cards and icons refinement */
 		.tile-emoji{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;background:linear-gradient(180deg,rgba(242,189,69,0.95),rgba(242,189,69,0.85));color:var(--navy);font-size:2rem;box-shadow:0 10px 22px rgba(36,111,168,0.12)}
 		.tile-title{font-size:1.45rem}
 		.tile-desc{color:rgba(235,246,255,0.82);font-size:1rem;line-height:1.6}
 		.dashboard-tile{background:linear-gradient(180deg,rgba(9,27,48,0.98),rgba(6,18,34,0.98));border-radius:22px;padding:32px;min-height:240px;box-shadow:0 16px 40px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,0.09);transition:transform .18s ease,box-shadow .18s ease}
 		.dashboard-tile:hover{transform:translateY(-4px);box-shadow:0 22px 58px rgba(0,0,0,.38)}
-		@media(max-width:560px){.tile-title{font-size:1.25rem}.tile-emoji{width:52px;height:52px;font-size:1.55rem}}
+		@media(max-width:560px){.tile-title{font-size:1.25rem}.tile-emoji{width:52px;height:52px;font-size:1.55rem}nav{padding:14px 10px}nav a{width:100%;min-height:68px;font-size:1.16rem;padding:14px 16px}}
 		@media(max-width:720px){
 			.site-header .hero-image{max-width:100%}
 			.site-header::after{background-size:contain;background-position:top right;width:60%;opacity:0.16;right:4%;top:8%}
@@ -56,14 +58,6 @@
 		.intro-hero p{max-width:900px;color:rgba(17,35,54,0.9);margin:0 0 12px;font-size:1.05rem}
 
 		/* Brochure-style hero background tweaks (redundant override removed) */
-
-		.public-intro{max-width:880px;margin:0 auto}
-		.public-intro h2{margin:0 0 20px;font-size:1.9rem;line-height:1.25;color:#f8fbff}
-		.public-intro p{margin:0 0 18px;font-size:1.06rem;line-height:1.85;color:rgba(235,246,255,0.9)}
-		.explore-cta-wrap{margin-top:28px;display:flex;justify-content:center}
-		.explore-cta{display:inline-flex;align-items:center;justify-content:center;padding:18px 34px;border-radius:999px;background:linear-gradient(180deg,#f2bd45,#e2a92b);color:#071928;text-decoration:none;font-weight:800;letter-spacing:0.03em;font-size:1.03rem;box-shadow:0 16px 36px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,0.16);transition:transform .16s ease,box-shadow .16s ease}
-		.explore-cta:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(0,0,0,.4)}
-		@media(max-width:720px){.public-intro h2{font-size:1.55rem}.public-intro p{font-size:1rem;line-height:1.75}.explore-cta{width:100%;max-width:420px;text-align:center}}
 	</style>
 </head>
 <body>
@@ -78,37 +72,37 @@
  		</header>
 
 	<nav>
-		<a href="index.html"><img src="icons/Dashboard-compass.png" alt="" width="19" height="19" aria-hidden="true"> Home</a>
-		<a href="arrival.html"><img src="icons/Dashboard-compass.png" alt="" width="19" height="19" aria-hidden="true"> Arrival Day</a>
-		<a href="london.html"><img src="icons/Dashboard-compass.png" alt="" width="19" height="19" aria-hidden="true"> London</a>
-		
-		<a href="dover-embarkation.html"><img src="icons/Dashboard-compass.png" alt="" width="19" height="19" aria-hidden="true"> Boarding</a>
-		<a href="ports.html"><img src="icons/Dashboard-compass.png" alt="" width="19" height="19" aria-hidden="true"> Ports of Call</a>
+		<a href="index.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">Home</span></a>
+		<a href="arrival.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">Arrival Day</span></a>
+		<a href="london.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">London</span></a>
+		<a href="faversham.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">Faversham</span></a>
+		<a href="dover-embarkation.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">Boarding</span></a>
+		<a href="ports.html"><img src="icons/Dashboard-compass.png" alt=""><span class="nav-label">Ports of Call</span></a>
 	</nav>
 
 	<main class="dashboard">
 		<section>
-			<div class="public-intro">
-				<h2>The Newest Chapter in Lynn and Frank’s Cruise Adventure</h2>
-				<p>Well, apparently just taking a cruise isn’t enough anymore.</p>
-				<p>For the past two weeks, I’ve been buried in maps, ports, trains, pubs, attractions, directions, photographs, cruise terminals and enough computer code to make me question several of my recent life choices. The result is the beginning of something new for Beyond the Gangway Travel.</p>
-				<p>Before anybody gets excited, no, Lynn and I are not travel agents, and we do not own a travel agency. Not yet, anyway. That particular adventure is still somewhere on the drawing board. But we have spent an unreasonable amount of our lives traveling, cruising, getting lost, finding our way again, and occasionally discovering that getting lost was the best part of the day.</p>
-				<p>So, as a courtesy to everyone sailing with us through England, Scotland, Ireland, the Netherlands and Norway, we’re opening up a sample of something I’ve been working on for the past couple of weeks.</p>
-				<p>It is our Beyond the Gangway Travel Companion, and this is very much the Beta version. Think of it as a test drive. It already includes our ports, attractions, maps, walking directions from wherever you happen to be standing, transportation information, nearby sights, planning tools, places to eat and drink, photo storage, and a travel journal. And we’re just getting started.</p>
-				<p>Eventually, the idea is to turn this into a much more complete travel app—something you can carry on your phone that acts like your own personal travel advisor when you walk off the ship. Instead of wondering Where are we? How do we get there? What’s nearby? How do we get back? And is there a decent pub anywhere around here? you pull out your phone and have the answers in your pocket.</p>
-				<p>Hopefully, sometime in the next few days I’ll also figure out how to make it so you can load it onto your iPhone or iPad and use it like an app instead of simply opening a website every time. That’s the plan, anyway. Sorry, Android folks—I don’t have it ready for Android phones yet. Give me a little time. I’ve only been pretending I know how to build an app for two weeks.</p>
-				<p>For now, this is a sample. Play with it. Try it on the trip. Push the buttons. See what works. If something doesn’t, remember that the technical department currently consists largely of one aging bald guy staring at a computer and occasionally threatening it.</p>
-				<p><strong>A Quick Note About the Dashboard:</strong> This is still the Beta demonstration version. For now, when you tap Dashboard from one of the port pages, you will return to this opening page. In the finished version, Dashboard will take you to a new dedicated front page that will serve as the main navigation center for the Travel Companion. That part is still under construction, so for now, consider this page both the front door and the way back home.</p>
-				<p>This is only the beginning of the next chapter of Lynn and Frank’s Cruise Adventure.</p>
-				<p>Hey… Let’s Get Out There.</p>
-				<div class="explore-cta-wrap">
-					<a class="explore-cta" href="ports.html">EXPLORE THE TRAVEL COMPANION</a>
-				</div>
+			<div class="intro-hero">
+				<h2>Welcome Aboard Beyond the Gangway Travel’s British Isles Adventure</h2>
+				<p>Embark on a curated journey through London, the British Isles and Norway — a handcrafted travel companion for our Holland America voyage aboard Nieuw Statendam.</p>
+				<p class="hero-subtitle">London • British Isles • Norwegian Fjords • Nieuw Statendam • August–September 2026</p>
+			</div>
+
+
+
+			<div class="top-callout">
+				<strong>Before You Sail — Important Notes:</strong>
+				<ul>
+					<li><strong>Heathrow arrival:</strong> 11:55 AM.</li>
+					<li><strong>Big Bus:</strong> 48‑hour sightseeing pass activated on arrival day.</li>
+					<li><strong>Hotel:</strong> The May Fair Hotel — check prebooked reservations.</li>
+				</ul>
 			</div>
 		</section>
 	</main>
 
 	<footer class="site-footer">Beyond the Gangway Travel 4.1 Build 5</footer>
 	<script src="js/app.js"></script>
+	<script type="module" src="js/firebase-sync.js"></script>
 </body>
 </html>

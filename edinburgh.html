@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -54,46 +54,6 @@
       color: var(--accent-strong);
     }
 
-    .arrival-edit-fields {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-    }
-
-    .arrival-edit-fields label {
-      display: grid;
-      gap: 0.35rem;
-      font-size: 0.94rem;
-      color: var(--text-muted);
-    }
-
-    .arrival-edit-fields label.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .arrival-edit-fields input,
-    .arrival-edit-fields textarea {
-      width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 0.65rem;
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text);
-      padding: 0.58rem 0.62rem;
-      font: inherit;
-      box-sizing: border-box;
-    }
-
-    .arrival-edit-fields textarea {
-      min-height: 105px;
-      resize: vertical;
-    }
-
-    .save-note {
-      margin: 0.75rem 0 0;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
     main details.london-section {
       border-top: none;
       padding-top: 0;
@@ -138,10 +98,6 @@
         font-size: 1rem;
       }
 
-      .arrival-edit-fields {
-        grid-template-columns: 1fr;
-      }
-
       main > section.overview-grid > article.overview-card,
       main > section.card-grid > article.destination-card {
         border-radius: 0.8rem;
@@ -159,7 +115,7 @@
         <a href="index.html">Dashboard</a>
         <a href="london.html">London</a>
         <a href="shopping.html">Shopping</a>
-        
+        <a href="faversham.html">Faversham</a>
         <a href="edinburgh.html" class="active">Edinburgh</a>
         <a href="dover.html">Dover</a>
       </nav>
@@ -176,13 +132,20 @@
             <summary class="london-section-summary">Edinburgh Castle</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="edinburgh-castle" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-castle-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="edinburgh-castle">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="edinburgh-castle">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="edinburgh-castle">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -273,13 +236,20 @@
             <summary class="london-section-summary">Royal Mile</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="royal-mile" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="royal-mile-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="royal-mile">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="royal-mile">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="royal-mile">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -287,7 +257,7 @@
                 <div class="london-section-body">
                   <p>Historic Old Town corridor connecting castle-side viewpoints to Holyroodhouse.</p>
                   <ul>
-                    <li>Excellent first-day route for landmarks, shops, cafÃ©s, and quick cultural stops.</li>
+                    <li>Excellent first-day route for landmarks, shops, cafés, and quick cultural stops.</li>
                     <li>Easy to combine with St Giles' Cathedral, Grassmarket, and museum stops.</li>
                   </ul>
                 </div>
@@ -370,13 +340,20 @@
             <summary class="london-section-summary">Royal Edinburgh Military Tattoo</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+Esplanade" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="royal-edinburgh-military-tattoo" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+Esplanade" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="edinburgh-tattoo-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="royal-edinburgh-military-tattoo">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="royal-edinburgh-military-tattoo">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="royal-edinburgh-military-tattoo">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -467,13 +444,20 @@
             <summary class="london-section-summary">Palace of Holyroodhouse</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="palace-of-holyroodhouse" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="holyroodhouse-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="palace-of-holyroodhouse">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="palace-of-holyroodhouse">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="palace-of-holyroodhouse">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -564,13 +548,20 @@
             <summary class="london-section-summary">Arthur's Seat</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="arthurs-seat" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="arthurs-seat-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="arthurs-seat">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="arthurs-seat">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="arthurs-seat">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -661,13 +652,20 @@
             <summary class="london-section-summary">National Museum of Scotland</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="national-museum-of-scotland" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="national-museum-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="national-museum-of-scotland">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="national-museum-of-scotland">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="national-museum-of-scotland">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -758,13 +756,20 @@
             <summary class="london-section-summary">Grassmarket</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="grassmarket" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="grassmarket-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="grassmarket">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="grassmarket">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="grassmarket">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -792,7 +797,7 @@
                     <li><strong>Admission:</strong> Public square, no entry ticket needed.</li>
                     <li><strong>Best Time to Visit:</strong> Late morning or early evening for dining windows.</li>
                     <li><strong>Walking Difficulty:</strong> Moderate, cobbled surface in places.</li>
-                    <li><strong>Rain Alternative:</strong> Nearby indoor cafÃ©s and museum route continuation.</li>
+                    <li><strong>Rain Alternative:</strong> Nearby indoor cafés and museum route continuation.</li>
                   </ul>
                 </div>
               </details>
@@ -855,13 +860,20 @@
             <summary class="london-section-summary">Dean Village</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-transit" style="grid-row:2;grid-column:1;">&#x1F68C; Transit Options</button>
-                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="dean-village" style="grid-row:3;grid-column:2;">&#x2795; Add to Today's Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">📌 Start GPS Navigation</a>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-transit">🚌 Transit Options</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="dean-village-top-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="dean-village">➕ Add to Today's Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="dean-village">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="dean-village">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today's Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ My Favorites</a>
               </div>
 
               <details class="london-section london-section-overview" open>
@@ -889,7 +901,7 @@
                     <li><strong>Admission:</strong> Open neighborhood walk, no ticket needed.</li>
                     <li><strong>Best Time to Visit:</strong> Morning light or late afternoon for quieter paths.</li>
                     <li><strong>Walking Difficulty:</strong> Easy to moderate with minor gradients.</li>
-                    <li><strong>Rain Alternative:</strong> Shift to nearby indoor galleries or cafÃ©s in New Town.</li>
+                    <li><strong>Rain Alternative:</strong> Shift to nearby indoor galleries or cafés in New Town.</li>
                   </ul>
                 </div>
               </details>
@@ -951,53 +963,8 @@
 
       <section class="group-section">
         <details class="london-section">
-          <summary class="london-section-summary group-title">Planned Excursions</summary>
+          <summary class="london-section-summary group-title">📅 Planned Excursions</summary>
           <div class="london-section-body">
-            <details class="london-section" open>
-              <summary class="london-section-summary">Your Excursion Information</summary>
-              <div class="london-section-body">
-                <form id="edinburgh-excursion-form" class="arrival-edit-fields" autocomplete="on">
-                  <label>
-                    Excursion / Tour Name
-                    <input type="text" id="excursion-tour-name" name="tourName" placeholder="Enter excursion or tour name">
-                  </label>
-                  <label>
-                    Tour Company
-                    <input type="text" id="excursion-tour-company" name="tourCompany" placeholder="Enter tour company">
-                  </label>
-                  <label>
-                    Date
-                    <input type="date" id="excursion-date" name="date">
-                  </label>
-                  <label>
-                    Meeting Time
-                    <input type="time" id="excursion-meeting-time" name="meetingTime">
-                  </label>
-                  <label>
-                    Meeting Location
-                    <input type="text" id="excursion-meeting-location" name="meetingLocation" placeholder="Enter meeting location">
-                  </label>
-                  <label>
-                    Confirmation / Booking Number
-                    <input type="text" id="excursion-booking-number" name="bookingNumber" placeholder="Enter confirmation or booking number">
-                  </label>
-                  <label>
-                    Cost
-                    <input type="text" id="excursion-cost" name="cost" placeholder="Enter cost">
-                  </label>
-                  <label>
-                    Return Time
-                    <input type="time" id="excursion-return-time" name="returnTime">
-                  </label>
-                  <label class="full-width">
-                    Notes
-                    <textarea id="excursion-notes" name="notes" placeholder="Add excursion notes"></textarea>
-                  </label>
-                </form>
-                <p class="save-note">Your entries save automatically on this device.</p>
-              </div>
-            </details>
-
             <details class="london-section">
               <summary class="london-section-summary">Edinburgh Overview</summary>
               <div class="london-section-body">
@@ -1096,9 +1063,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+Esplanade" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+Esplanade" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle+Esplanade&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1115,9 +1082,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Edinburgh+Castle&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1134,9 +1101,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Royal+Mile+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1153,9 +1120,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Palace+of+Holyroodhouse&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1172,9 +1139,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Arthur%27s+Seat+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Arthur%27s+Seat+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1191,9 +1158,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=National+Museum+of+Scotland&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1210,9 +1177,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Grassmarket+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1229,9 +1196,9 @@
               <div class="london-section-body">
                 <article class="destination-card">
                   <div class="london-action-bar">
-                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">&#x1F3A4; Voice Navigation</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                    <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Dean+Village+Edinburgh&travelmode=walking&dir_action=navigate" target="_blank" rel="noopener noreferrer">🔊 Voice Navigation</a>
                   </div>
                   <details class="london-section london-section-overview" open>
                     <summary class="london-section-summary">Overview</summary>
@@ -1321,16 +1288,14 @@
         </details>
       </section>
 
-      <section class="group-section">
-        <details class="london-section">
-          <summary class="london-section-summary group-title">Travel Journal</summary>
-          <div class="london-section-body">
-            <h2>Edinburgh Travel Journal</h2>
-            <p>Write your Edinburgh notes, highlights, reminders, and reflections.</p>
-            <textarea id="travel-journal-text" placeholder="Write your Edinburgh journal..."></textarea>
-            <p class="save-note">Your journal saves automatically on this device.</p>
-          </div>
-        </details>
+      <section class="travel-journal">
+        <h2>📘 Today's Travel Story — Facebook Version</h2>
+        <p>Write the short version of today's adventure here — the story to share with friends.</p>
+        <textarea placeholder="Today's Facebook story..."></textarea>
+
+        <h2>✍️ Travel Journal — Book Version</h2>
+        <p>Write the longer version here — memories, people, history, funny moments, and details for the book.</p>
+        <textarea placeholder="Today's book version..."></textarea>
       </section>
 
       <section class="photo-gallery-collapsible">
@@ -1357,59 +1322,7 @@
     </footer>
   </div>
   <script src="js/app.js"></script>
-  <script>
-    (function () {
-      var excursionKey = "edinburghExcursionInfo";
-      var journalKey = "edinburghTravelJournal";
-
-      function getStoredExcursionData() {
-        try {
-          var raw = localStorage.getItem(excursionKey);
-          return raw ? JSON.parse(raw) : {};
-        } catch (error) {
-          return {};
-        }
-      }
-
-      function saveExcursionData(data) {
-        localStorage.setItem(excursionKey, JSON.stringify(data));
-      }
-
-      var excursionFields = {
-        tourName: "excursion-tour-name",
-        tourCompany: "excursion-tour-company",
-        date: "excursion-date",
-        meetingTime: "excursion-meeting-time",
-        meetingLocation: "excursion-meeting-location",
-        bookingNumber: "excursion-booking-number",
-        cost: "excursion-cost",
-        returnTime: "excursion-return-time",
-        notes: "excursion-notes"
-      };
-
-      var excursionData = getStoredExcursionData();
-      Object.keys(excursionFields).forEach(function (key) {
-        var field = document.getElementById(excursionFields[key]);
-        if (!field) {
-          return;
-        }
-        field.value = excursionData[key] || "";
-        field.addEventListener("input", function () {
-          excursionData[key] = field.value;
-          saveExcursionData(excursionData);
-        });
-      });
-
-      var journalField = document.getElementById("travel-journal-text");
-      if (!journalField) {
-        return;
-      }
-      journalField.value = localStorage.getItem(journalKey) || "";
-      journalField.addEventListener("input", function () {
-        localStorage.setItem(journalKey, journalField.value);
-      });
-    })();
-  </script>
+  <script type="module" src="js/firebase-sync.js"></script>
 </body>
 </html>
 

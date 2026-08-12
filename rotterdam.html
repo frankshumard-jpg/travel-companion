@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,27 +7,19 @@
   <title>Rotterdam | Beyond the Gangway Travel</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Markthal-only visual normalization to match the approved attraction layout. */
-    article[data-attraction-key="markthal rotterdam"] .london-action-bar .button.secondary {
-      border: 2px solid rgba(255,255,255,0.95) !important;
-    }
-    article[data-attraction-key="markthal rotterdam"] > details > .london-section-body > .button.secondary {
-      display: none !important;
-    }
-  </style>
 </head>
 <body>
   <div class="page-shell">
     <header class="site-header">
       <div class="brand">
-        <a class="home-link" href="index.html" style="grid-row:2;grid-column:1;">Beyond the Gangway Travel</a>
+        <a class="home-link" href="index.html">Beyond the Gangway Travel</a>
       </div>
       <nav class="main-nav">
         <a href="index.html">Dashboard</a>
         <a href="london.html">London</a>
         <a href="shopping.html">Shopping</a>
-                <a href="edinburgh.html">Edinburgh</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
         <a href="rotterdam.html" class="active">Rotterdam</a>
       </nav>
     </header>
@@ -44,13 +36,19 @@
             <summary class="london-section-summary">Markthal</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Markthal+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Markthal+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Markthal+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="markthal rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Markthal+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Markthal+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Markthal+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-markthal-gallery">📷 Photo Gallery</button>
+              </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                <button type="button" class="button secondary" data-add-to-today-plan="markthal rotterdam">➕ Add to Today&apos;s Plan</button>
+                <button type="button" class="button secondary" data-favorite-attraction="markthal rotterdam">🤍 Favorite</button>
+                <button type="button" class="button secondary" data-visit-status="markthal rotterdam">□ Planned</button>
+                <a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a>
+                <a class="button secondary" href="my-favorites.html">❤️ Favorites</a>
               </div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Rotterdam&apos;s top central architecture-and-food anchor with easy links to nearby sights.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Good first stop after leaving ship.</li><li>Pair with Cube Houses and Old Harbour for compact pacing.</li><li>Best used as central midday food-and-rest anchor.</li></ul></div></details>
@@ -69,14 +67,14 @@
             <summary class="london-section-summary">Cube Houses</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Cube+Houses+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cube+Houses+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cube+Houses+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="cube houses rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Cube+Houses+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cube+Houses+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Cube+Houses+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-cubes-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="cube houses rotterdam">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="cube houses rotterdam">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="cube houses rotterdam">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Signature Rotterdam architecture stop, easy to pair with Markthal and nearby harbour views.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Ideal as a second stop after Markthal.</li><li>Short on-site time, high photo value.</li><li>Good branch point toward bridge or harbour routes.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Walkable from central attractions and practical by short transit hop from ship-side approach routes.</p></div></details>
@@ -94,14 +92,14 @@
             <summary class="london-section-summary">Erasmus Bridge</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Erasmus+Bridge+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Erasmus+Bridge+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Erasmus+Bridge+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="erasmus bridge rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Erasmus+Bridge+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Erasmus+Bridge+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Erasmus+Bridge+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-erasmus-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="erasmus bridge rotterdam">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="erasmus bridge rotterdam">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="erasmus bridge rotterdam">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Rotterdam skyline icon and strong riverfront photo route with easy onward city links.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Best in clear weather for skyline shots.</li><li>Use as a corridor stop between central and riverfront zones.</li><li>Watch wind exposure on open crossing points.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Accessible by city walking corridors or short transit link from central attractions.</p></div></details>
@@ -119,14 +117,14 @@
             <summary class="london-section-summary">Maritime Museum</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Maritime+Museum+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Maritime+Museum+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Maritime+Museum+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="maritime museum rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Maritime+Museum+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Maritime+Museum+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Maritime+Museum+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-maritime-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="maritime museum rotterdam">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="maritime museum rotterdam">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="maritime museum rotterdam">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> High-value indoor port-history stop with interactive exhibits and flexible pacing.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Great midday indoor option in variable weather.</li><li>Pairs well with Erasmus Bridge route.</li><li>Use as a schedule stabilizer if outdoor timing slips.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Practical by short transfer from central zones with easy route back toward cruise-side corridors.</p></div></details>
@@ -144,14 +142,14 @@
             <summary class="london-section-summary">Euromast</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Euromast+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Euromast+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Euromast+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="euromast rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Euromast+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Euromast+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Euromast+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-euromast-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="euromast rotterdam">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="euromast rotterdam">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="euromast rotterdam">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Elevated panoramic viewpoint and skyline-photo anchor with strong harbor perspective.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Best visibility in clear weather windows.</li><li>Paid viewpoint stop; verify queue conditions on arrival.</li><li>Works best as one longer-transfer attraction for afternoon.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Short city transfer from central corridor; pair with Museumpark or riverfront routing.</p></div></details>
@@ -169,14 +167,14 @@
             <summary class="london-section-summary">Delfshaven</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Delfshaven+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Delfshaven+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Delfshaven+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="delfshaven rotterdam" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Delfshaven+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Delfshaven+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Delfshaven+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-delfshaven-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="delfshaven rotterdam">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="delfshaven rotterdam">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="delfshaven rotterdam">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Historic harbour quarter with canal views and a quieter contrast to central modern Rotterdam.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Slower-paced walking stop with historic atmosphere.</li><li>Good contrast if modern-core attractions feel too busy.</li><li>Works best when return routing is already confirmed.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Reach by short transit from central route, then explore mostly on foot around the quay.</p></div></details>
@@ -194,14 +192,14 @@
             <summary class="london-section-summary">Depot Boijmans Van Beuningen</summary>
             <div class="london-section-body">
               <div class="london-action-bar">
-                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Depot+Boijmans+Van+Beuningen+Rotterdam" target="_blank" rel="noopener noreferrer">&#x1F4CD; View on Google Maps</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Depot+Boijmans+Van+Beuningen+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">&#x1F6B6; Walking Directions</a>
-                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Depot+Boijmans+Van+Beuningen+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer" style="grid-row:2;grid-column:1;">&#x1F68C; Transit</a>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-travel" style="grid-row:2;grid-column:2;">&#x1F9ED; Travel Information</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-nearby">&#x2B50; Nearby Attractions</button>
-                <button type="button" class="button secondary" data-add-to-today-plan="depot boijmans van beuningen" style="grid-row:3;grid-column:2;">Add to Today&apos;s Plan</button>
-                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-gallery" style="grid-row:4;grid-column:1 / -1;">&#x1F4F7; Photo Gallery</button>
+                <a class="button" href="https://www.google.com/maps/search/?api=1&query=Depot+Boijmans+Van+Beuningen+Rotterdam" target="_blank" rel="noopener noreferrer">📍 View on Google Maps</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Depot+Boijmans+Van+Beuningen+Rotterdam&travelmode=walking" target="_blank" rel="noopener noreferrer">🚶 Walking Directions</a>
+                <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&destination=Depot+Boijmans+Van+Beuningen+Rotterdam&travelmode=transit" target="_blank" rel="noopener noreferrer">🚌 Transit</a>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-nearby">⭐ Nearby Attractions</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-travel">🧭 Travel Information</button>
+                <button type="button" class="button secondary" data-london-toggle-target="rotterdam-depot-gallery">📷 Photo Gallery</button>
               </div>
+              <div class="london-personal-actions" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><button type="button" class="button secondary" data-add-to-today-plan="depot boijmans van beuningen">➕ Add to Today&apos;s Plan</button><button type="button" class="button secondary" data-favorite-attraction="depot boijmans van beuningen">🤍 Favorite</button><button type="button" class="button secondary" data-visit-status="depot boijmans van beuningen">□ Planned</button><a class="button secondary" href="todays-plan.html">📅 Today&apos;s Plan</a><a class="button secondary" href="my-favorites.html">❤️ Favorites</a></div>
               <details class="london-section london-section-overview" open><summary class="london-section-summary">Overview</summary><div class="london-section-body"><p><strong>Why go:</strong> Distinctive mirrored landmark and museum-storage concept with strong design and city-view appeal.</p></div></details>
               <details class="london-section"><summary class="london-section-summary">Plan Your Visit</summary><div class="london-section-body"><ul><li>Pair with Museumpark and nearby districts.</li><li>Strong design-focused stop for architecture interest.</li><li>Best when weather or wind reduce open-river priorities.</li></ul></div></details>
               <details class="london-section"><summary class="london-section-summary">Getting There</summary><div class="london-section-body"><p>Short transfer from city core, then straightforward district walking connections.</p></div></details>
@@ -228,8 +226,6 @@
                   <li><strong>Strong anchors:</strong> Markthal, Cube Houses, Erasmus Bridge, and Maritime Museum.</li>
                   <li><strong>Pacing tip:</strong> Keep extra margin for bridge crossings, transit interchanges, and return-to-ship flow.</li>
                 </ul>
-                <p><strong>My excursion / planning notes:</strong></p>
-                <textarea data-my-notes-key="rotterdam-excursion-planning" rows="6" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add booked excursion, meeting point, time, confirmation number, or plans..."></textarea>
               </div>
             </details>
             <details class="london-section">
@@ -255,37 +251,6 @@
                   <li><strong>Best strategy:</strong> Start with one central anchor and add nearby stops before crossing wider city zones.</li>
                   <li><strong>Return margin:</strong> Build extra time for bridge/transit changes and cruise-terminal return flow.</li>
                 </ul>
-              </div>
-            </details>
-          </div>
-        </details>
-      </section>
-
-      <section class="group-section">
-        <details class="london-section">
-          <summary class="london-section-summary group-title">Food, Pubs &amp; Daily Life</summary>
-          <div class="london-section-body">
-            <details class="london-section">
-              <summary class="london-section-summary">Markthal &amp; Central Food</summary>
-              <div class="london-section-body">
-                <p><strong>Markthal:</strong> The easiest central food stop on this route, with many choices under one roof and excellent pairing with the Cube Houses and Old Harbour.</p>
-              </div>
-            </details>
-            <details class="london-section">
-              <summary class="london-section-summary">Pubs, Bars &amp; Local Stops</summary>
-              <div class="london-section-body">
-                <ul>
-                  <li><strong>Old Harbour / Oude Haven:</strong> Convenient waterside area for cafés, bars, and a relaxed stop immediately beside the Cube Houses.</li>
-                  <li><strong>Delfshaven:</strong> Better choice when you want historic atmosphere, older streets, cafés, and a slower local feel.</li>
-                  <li><strong>Near attractions:</strong> Use the nearby-attractions information inside each attraction card to keep food or drink stops close to the sightseeing route.</li>
-                </ul>
-                <textarea data-my-notes-key="rotterdam-food-pubs" rows="5" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Add a Rotterdam pub, café, restaurant, or local discovery..."></textarea>
-              </div>
-            </details>
-            <details class="london-section">
-              <summary class="london-section-summary">Daily Life</summary>
-              <div class="london-section-body">
-                <p>Rotterdam is a working modern port city. Watch carefully for bicycles and trams when crossing streets, and use the compact Markthal–Cube Houses–Old Harbour cluster when you want an easy stretch of sightseeing without another transfer.</p>
               </div>
             </details>
           </div>
@@ -345,9 +310,13 @@
 
 
       <section class="travel-journal">
-        <h2>&#x1F4D6; Travel Journal</h2>
-        <p>Write today's memories, people, places, funny moments, and details here.</p>
-        <textarea data-my-notes-key="rotterdam-travel-journal" rows="8" style="width:100%;border-radius:12px;padding:0.75rem;background:rgba(0,0,0,0.2);color:var(--text);border:1px solid rgba(255,255,255,0.16);" placeholder="Today's travel journal..."></textarea>
+        <h2>📘 Today's Travel Story — Facebook Version</h2>
+        <p>Write the short version of today's adventure here — the story to share with friends.</p>
+        <textarea placeholder="Today's Facebook story..."></textarea>
+
+        <h2>✍️ Travel Journal — Book Version</h2>
+        <p>Write the longer version here — memories, people, history, funny moments, and details for the book.</p>
+        <textarea placeholder="Today's book version..."></textarea>
       </section>      <section class="photo-gallery-collapsible">
         <button type="button" class="button secondary gallery-toggle" aria-expanded="false">Beyond the Gangway Travel Photo Gallery</button>
         <div class="gallery-content" aria-hidden="true">
@@ -367,6 +336,7 @@
     </footer>
   </div>
   <script src="js/app.js"></script>
+  <script type="module" src="js/firebase-sync.js"></script>
 </body>
 </html>
 

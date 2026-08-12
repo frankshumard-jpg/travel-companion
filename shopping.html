@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -105,7 +105,8 @@
         <a href="index.html">Dashboard</a>
         <a href="london.html">London</a>
         <a href="shopping.html" class="active">Shopping</a>
-                <a href="edinburgh.html">Edinburgh</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
         <a href="dover.html">Dover</a>
       </nav>
     </header>
@@ -121,6 +122,7 @@
           <div class="london-section-body">
             <div class="shopping-timeline">
               <div class="timeline-item"><div class="timeline-icon">&#128717;</div><div class="timeline-copy"><h4>London</h4><p>Luxury shopping &amp; British souvenirs</p></div></div>
+              <div class="timeline-item"><div class="timeline-icon">&#128717;</div><div class="timeline-copy"><h4>Faversham</h4><p>Historic High Street &amp; local Kent gifts</p></div></div>
               <div class="timeline-item"><div class="timeline-icon">&#128717;</div><div class="timeline-copy"><h4>Dover</h4><p>Last-minute cruise essentials</p></div></div>
               <div class="timeline-item"><div class="timeline-icon">&#128717;</div><div class="timeline-copy"><h4>Edinburgh</h4><p>Royal Mile &amp; Haliburton tartan</p></div></div>
               <div class="timeline-item"><div class="timeline-icon">&#128717;</div><div class="timeline-copy"><h4>Dirleton / North Berwick</h4><p>Clan merchandise &amp; local crafts</p></div></div>
@@ -147,8 +149,8 @@
             <p>London is the strongest luxury and classic department-store shopping stop of the trip, especially from The May Fair Hotel base in Mayfair.</p>
             <p>Visit for iconic British retail, polished gift buying, and the easiest access to high-end brands and classic souvenir shopping in one city.</p>
 
-            <h4>Louis Vuitton � New Bond Street</h4>
-            <p>Closest Louis Vuitton boutique to The May Fair Hotel, about an 8�10 minute walk through Mayfair.</p>
+            <h4>Louis Vuitton – New Bond Street</h4>
+            <p>Closest Louis Vuitton boutique to The May Fair Hotel, about an 8–10 minute walk through Mayfair.</p>
             <p>Worth visiting for flagship-level selection, classic Paris-London luxury atmosphere, and easy access from the hotel.</p>
             <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
               <a class="button" href="https://www.google.com/maps/search/?api=1&query=Louis+Vuitton+New+Bond+Street+London" target="_blank" rel="noopener noreferrer">Google Maps</a>
@@ -164,7 +166,7 @@
             </div>
 
             <h4>Liberty London</h4>
-            <p>Historic Tudor-style department store with luxury British gifts, fashion, scarves, and distinctive home d�cor.</p>
+            <p>Historic Tudor-style department store with luxury British gifts, fashion, scarves, and distinctive home décor.</p>
             <p>Worth visiting for iconic architecture, heritage retail atmosphere, and highly giftable British design pieces.</p>
             <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
               <a class="button" href="https://www.google.com/maps/search/?api=1&query=Liberty+London" target="_blank" rel="noopener noreferrer">Google Maps</a>
@@ -199,6 +201,30 @@
               <li>Start in Mayfair and Piccadilly so luxury shops, food halls and souvenir stops flow naturally in one outing.</li>
               <li>Fortnum &amp; Mason is best for edible gifts and packed hampers near the end of the London stay.</li>
               <li>Hamleys and Burlington Arcade are also worthwhile photo stops even if purchases are minimal.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Faversham Shopping</summary>
+          <div class="london-section-body">
+            <p>Faversham works best as a relaxed local shopping town rather than a major retail destination.</p>
+            <p>Visit for independent browsing, small English-town character, and food-focused keepsakes that feel tied to the day with Preston and Ann.</p>
+
+            <h4>Faversham Town Centre</h4>
+            <p>Independent High Street shops, antique stores, tea shops, local bakeries, and practical Kent souvenirs cluster in the historic center.</p>
+            <p>Worth visiting for relaxed browsing with Preston and Ann, small-shop charm, and locally grounded gifts that feel more personal than tourist-heavy purchases.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Faversham+Town+Centre" target="_blank" rel="noopener noreferrer">Google Maps</a>
+            </div>
+
+            <h4>Faversham Shopping Tips</h4>
+            <ul>
+              <li>Focus on independent High Street shops first, then tea shops and bakeries for easy edible gifts.</li>
+              <li>Antique browsing is best done slowly because small shops often hold the most interesting finds.</li>
+              <li>Kent gifts and practical local keepsakes are better value here than generic London souvenirs.</li>
             </ul>
           </div>
         </details>
@@ -342,7 +368,7 @@
             <p>Inverness is the most practical Highland shopping stop for clan gifts, Nessie souvenirs, whisky and central browseable gift shops.</p>
             <p>Visit for a balanced mix of humor, Scottish heritage, and easy city-center shopping before returning toward the ship.</p>
 
-            <h4>Inverness � Local Highland Gifts</h4>
+            <h4>Inverness – Local Highland Gifts</h4>
             <p>Look for clan merchandise, Nessie souvenirs, whisky, and local crafts around the Victorian Market and central Inverness shopping streets.</p>
             <p>Worth visiting for distinctly Highland souvenirs that balance humor, heritage, and practical gift-buying in one walkable area.</p>
             <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
@@ -521,5 +547,6 @@
     </footer>
   </div>
   <script src="js/app.js"></script>
+  <script type="module" src="js/firebase-sync.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -54,46 +54,6 @@
       color: var(--accent-strong);
     }
 
-    .arrival-edit-fields {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-    }
-
-    .arrival-edit-fields label {
-      display: grid;
-      gap: 0.35rem;
-      font-size: 0.94rem;
-      color: var(--text-muted);
-    }
-
-    .arrival-edit-fields label.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .arrival-edit-fields input,
-    .arrival-edit-fields textarea {
-      width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 0.65rem;
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text);
-      padding: 0.58rem 0.62rem;
-      font: inherit;
-      box-sizing: border-box;
-    }
-
-    .arrival-edit-fields textarea {
-      min-height: 105px;
-      resize: vertical;
-    }
-
-    .save-note {
-      margin: 0.75rem 0 0;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
     main details.london-section {
       border-top: none;
       padding-top: 0;
@@ -138,10 +98,6 @@
         font-size: 1rem;
       }
 
-      .arrival-edit-fields {
-        grid-template-columns: 1fr;
-      }
-
       main > section.overview-grid > article.overview-card,
       main > section.card-grid > article.destination-card {
         border-radius: 0.8rem;
@@ -159,7 +115,8 @@
         <a href="index.html">Dashboard</a>
         <a href="arrival.html" class="active">Arrival Day</a>
         <a href="shopping.html">Shopping</a>
-                <a href="edinburgh.html">Edinburgh</a>
+        <a href="faversham.html">Faversham</a>
+        <a href="edinburgh.html">Edinburgh</a>
         <a href="dover.html">Dover</a>
       </nav>
     </header>
@@ -167,7 +124,7 @@
     <main>
       <section class="page-intro">
         <h1>Arrival Day Logistics</h1>
-        <p class="subtitle">Travel-day checklist from the United States to Heathrow and onward to your hotel.</p>
+        <p class="subtitle">Travel-day checklist from the United States to Heathrow and onward to The May Fair Hotel.</p>
       </section>
 
       <section class="group-section">
@@ -177,51 +134,14 @@
             <section class="overview-grid">
               <article class="overview-card">
                 <details class="london-section" open>
-                  <summary class="london-section-summary">Your Arrival Information</summary>
+                  <summary class="london-section-summary">United Airlines Flight Information</summary>
                   <div class="london-section-body">
-                    <form id="arrival-details-form" class="arrival-edit-fields" autocomplete="on">
-                      <label>
-                        Airline
-                        <input type="text" id="traveler-airline" name="airline" placeholder="Enter airline">
-                      </label>
-                      <label>
-                        Flight Number
-                        <input type="text" id="traveler-flight-number" name="flightNumber" placeholder="Enter flight number">
-                      </label>
-                      <label>
-                        Arrival Airport
-                        <input type="text" id="traveler-arrival-airport" name="arrivalAirport" placeholder="Enter arrival airport">
-                      </label>
-                      <label>
-                        Arrival Date
-                        <input type="date" id="traveler-arrival-date" name="arrivalDate">
-                      </label>
-                      <label>
-                        Arrival Time
-                        <input type="time" id="traveler-arrival-time" name="arrivalTime">
-                      </label>
-                      <label>
-                        Hotel Name
-                        <input type="text" id="traveler-hotel-name" name="hotelName" placeholder="Enter hotel name">
-                      </label>
-                      <label class="full-width">
-                        Hotel Address
-                        <input type="text" id="traveler-hotel-address" name="hotelAddress" placeholder="Enter hotel address">
-                      </label>
-                      <label>
-                        Hotel Phone
-                        <input type="tel" id="traveler-hotel-phone" name="hotelPhone" placeholder="Enter hotel phone">
-                      </label>
-                      <label>
-                        Hotel Website
-                        <input type="url" id="traveler-hotel-website" name="hotelWebsite" placeholder="https://example.com">
-                      </label>
-                      <label class="full-width">
-                        Transfer / Transportation Information
-                        <textarea id="traveler-transfer-info" name="transferInfo" placeholder="Enter transfer details, pickup point, and notes"></textarea>
-                      </label>
-                    </form>
-                    <p class="save-note">Your entries save automatically on this device.</p>
+                    <ul>
+                      <li><strong>Carrier:</strong> United Airlines</li>
+                      <li><strong>Travel day focus:</strong> Long-haul US departure to London Heathrow (LHR)</li>
+                      <li><strong>Arrival target:</strong> Heathrow Airport around midday local time</li>
+                      <li><strong>Reminder:</strong> Confirm terminal, baggage policy, and seat assignments in the United app before boarding</li>
+                    </ul>
                   </div>
                 </details>
               </article>
@@ -265,13 +185,13 @@
 
               <article class="overview-card">
                 <details class="london-section" open>
-                  <summary class="london-section-summary">Transfer Plan</summary>
+                  <summary class="london-section-summary">Private Transfer to The May Fair Hotel</summary>
                   <div class="london-section-body">
                     <ul>
-                      <li><strong>Your transfer details:</strong> <span id="transfer-info-display">Add your transfer and transportation information in the form above.</span></li>
+                      <li><strong>Pickup point:</strong> Heathrow arrivals hall (as directed by transfer provider)</li>
                       <li><strong>Estimated ride time:</strong> 45-90 minutes depending on traffic</li>
                       <li><strong>Driver coordination:</strong> Keep phone on and monitor messages after clearing Customs</li>
-                      <li><strong>Contingency:</strong> If you cannot find your driver, contact the transfer company first, then your hotel concierge</li>
+                      <li><strong>Contingency:</strong> If you cannot find the driver, contact the transfer company first, then hotel concierge</li>
                     </ul>
                   </div>
                 </details>
@@ -288,18 +208,18 @@
             <section class="overview-grid">
               <article class="overview-card">
                 <details class="london-section" open>
-                  <summary class="london-section-summary">Hotel Details</summary>
+                  <summary class="london-section-summary">The May Fair Hotel Details</summary>
                   <div class="london-section-body">
                     <ul>
-                      <li><strong>Hotel:</strong> <span id="hotel-name-display">Not entered yet</span></li>
-                      <li><strong>Address:</strong> <span id="hotel-address-display">Not entered yet</span></li>
-                      <li><strong>Phone:</strong> <span id="hotel-phone-display">Not entered yet</span></li>
-                      <li><strong>Website:</strong> <span id="hotel-website-display">Not entered yet</span></li>
+                      <li><strong>Hotel:</strong> The May Fair, A Radisson Collection Hotel</li>
+                      <li><strong>Address:</strong> Stratton Street, Mayfair, London W1J 8LT, United Kingdom</li>
+                      <li><strong>Phone:</strong> +44 20 7769 8200</li>
+                      <li><strong>Website:</strong> https://www.themayfairhotel.co.uk</li>
                       <li><strong>Check-in:</strong> Standard check-in is typically in the afternoon; request early check-in at the front desk if room is not ready.</li>
                     </ul>
                     <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
-                      <a class="button" id="hotel-website-button" href="#" target="_blank" rel="noopener noreferrer">Hotel Website</a>
-                      <a class="button secondary" id="hotel-call-button" href="#">Call Hotel</a>
+                      <a class="button" href="https://www.themayfairhotel.co.uk" target="_blank" rel="noopener noreferrer">Hotel Website</a>
+                      <a class="button secondary" href="tel:+442077698200">Call Hotel</a>
                     </div>
                   </div>
                 </details>
@@ -313,7 +233,7 @@
                       <li><strong>UK emergency services:</strong> 999</li>
                       <li><strong>NHS non-emergency medical line:</strong> 111</li>
                       <li><strong>Police non-emergency:</strong> 101</li>
-                      <li><strong>Hotel front desk:</strong> <span id="hotel-front-desk-display">Use your saved hotel phone number</span></li>
+                      <li><strong>Hotel front desk:</strong> +44 20 7769 8200</li>
                     </ul>
                   </div>
                 </details>
@@ -374,12 +294,12 @@
 
       <section class="group-section">
         <details class="london-section">
-          <summary class="london-section-summary group-title">Nearby Essentials Around Your Hotel</summary>
+          <summary class="london-section-summary group-title">Nearby Essentials Around The May Fair</summary>
           <div class="london-section-body">
             <section class="card-grid">
               <article class="destination-card">
                 <details class="london-section" open>
-                  <summary class="london-section-summary">Nearby Essentials Around Your Hotel</summary>
+                  <summary class="london-section-summary">Nearby Essentials Around The May Fair</summary>
                   <div class="london-section-body">
                     <ul>
                       <li><strong>ATM:</strong> Cash points available around Piccadilly and Green Park station area.</li>
@@ -387,9 +307,9 @@
                       <li><strong>Groceries:</strong> Marks and Spencer Food Hall and local convenience stores nearby.</li>
                     </ul>
                     <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
-                      <a class="button secondary" id="nearby-atm-link" href="https://www.google.com/maps/search/?api=1&query=ATM+near+my+hotel+London" target="_blank" rel="noopener noreferrer">Nearby ATM</a>
-                      <a class="button secondary" id="nearby-pharmacy-link" href="https://www.google.com/maps/search/?api=1&query=Pharmacy+near+my+hotel+London" target="_blank" rel="noopener noreferrer">Nearby Pharmacy</a>
-                      <a class="button secondary" id="nearby-grocery-link" href="https://www.google.com/maps/search/?api=1&query=Grocery+near+my+hotel+London" target="_blank" rel="noopener noreferrer">Nearby Grocery</a>
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=ATM+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby ATM</a>
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Pharmacy+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby Pharmacy</a>
+                      <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Grocery+near+The+May+Fair+Hotel+London" target="_blank" rel="noopener noreferrer">Nearby Grocery</a>
                     </div>
                   </div>
                 </details>
@@ -401,12 +321,22 @@
 
       <section class="group-section">
         <details class="london-section">
-          <summary class="london-section-summary group-title">Travel Journal</summary>
+          <summary class="london-section-summary group-title">Facebook Journal</summary>
           <div class="london-section-body">
-            <h2>Arrival Day Travel Journal</h2>
-            <p>Write your arrival day notes, highlights, reminders, and reflections.</p>
-            <textarea id="travel-journal-text" placeholder="Write your arrival day journal..."></textarea>
-            <p class="save-note">Your journal saves automatically on this device.</p>
+            <h2>Arrival Day Facebook Journal</h2>
+            <p>Write the short version of arrival day highlights to share with friends.</p>
+            <textarea placeholder="Arrival Day Facebook journal..."></textarea>
+          </div>
+        </details>
+      </section>
+
+      <section class="group-section">
+        <details class="london-section">
+          <summary class="london-section-summary group-title">Book Journal</summary>
+          <div class="london-section-body">
+            <h2>Arrival Day Book Journal</h2>
+            <p>Write the full arrival day story with details, notes, and reflections.</p>
+            <textarea placeholder="Arrival Day book journal..."></textarea>
           </div>
         </details>
       </section>
@@ -421,121 +351,7 @@
     </footer>
   </div>
   <script src="js/app.js"></script>
-  <script>
-    (function () {
-      var storageKey = "arrivalDayTravelerData";
-      var journalKey = "arrivalDayTravelJournal";
-
-      var fieldIds = {
-        airline: "traveler-airline",
-        flightNumber: "traveler-flight-number",
-        arrivalAirport: "traveler-arrival-airport",
-        arrivalDate: "traveler-arrival-date",
-        arrivalTime: "traveler-arrival-time",
-        hotelName: "traveler-hotel-name",
-        hotelAddress: "traveler-hotel-address",
-        hotelPhone: "traveler-hotel-phone",
-        hotelWebsite: "traveler-hotel-website",
-        transferInfo: "traveler-transfer-info"
-      };
-
-      function getStoredData() {
-        try {
-          var raw = localStorage.getItem(storageKey);
-          return raw ? JSON.parse(raw) : {};
-        } catch (error) {
-          return {};
-        }
-      }
-
-      function saveData(data) {
-        localStorage.setItem(storageKey, JSON.stringify(data));
-      }
-
-      function safeText(value, fallback) {
-        var trimmed = (value || "").trim();
-        return trimmed || fallback;
-      }
-
-      function buildMapsLink(kind, hotelName, hotelAddress) {
-        var location = (hotelName + " " + hotelAddress).trim();
-        if (!location) {
-          location = "London";
-        }
-        return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(kind + " near " + location);
-      }
-
-      function sanitizePhone(phone) {
-        return (phone || "").trim().replace(/\s+/g, "");
-      }
-
-      function normalizeWebsite(url) {
-        var value = (url || "").trim();
-        if (!value) {
-          return "";
-        }
-        if (!/^https?:\/\//i.test(value)) {
-          return "https://" + value;
-        }
-        return value;
-      }
-
-      function updateDisplay(data) {
-        var hotelName = safeText(data.hotelName, "Not entered yet");
-        var hotelAddress = safeText(data.hotelAddress, "Not entered yet");
-        var hotelPhone = safeText(data.hotelPhone, "Not entered yet");
-        var hotelWebsite = safeText(data.hotelWebsite, "Not entered yet");
-
-        var hotelNameDisplay = document.getElementById("hotel-name-display");
-        var hotelAddressDisplay = document.getElementById("hotel-address-display");
-        var hotelPhoneDisplay = document.getElementById("hotel-phone-display");
-        var hotelWebsiteDisplay = document.getElementById("hotel-website-display");
-        var frontDeskDisplay = document.getElementById("hotel-front-desk-display");
-        var transferInfoDisplay = document.getElementById("transfer-info-display");
-
-        hotelNameDisplay.textContent = hotelName;
-        hotelAddressDisplay.textContent = hotelAddress;
-        hotelPhoneDisplay.textContent = hotelPhone;
-        hotelWebsiteDisplay.textContent = hotelWebsite;
-        frontDeskDisplay.textContent = safeText(data.hotelPhone, "Use your saved hotel phone number");
-        transferInfoDisplay.textContent = safeText(data.transferInfo, "Add your transfer and transportation information in the form above.");
-
-        var websiteButton = document.getElementById("hotel-website-button");
-        var websiteHref = normalizeWebsite(data.hotelWebsite);
-        websiteButton.href = websiteHref || "#";
-
-        var callButton = document.getElementById("hotel-call-button");
-        var sanitizedPhone = sanitizePhone(data.hotelPhone);
-        callButton.href = sanitizedPhone ? "tel:" + sanitizedPhone : "#";
-
-        document.getElementById("nearby-atm-link").href = buildMapsLink("ATM", data.hotelName || "", data.hotelAddress || "");
-        document.getElementById("nearby-pharmacy-link").href = buildMapsLink("Pharmacy", data.hotelName || "", data.hotelAddress || "");
-        document.getElementById("nearby-grocery-link").href = buildMapsLink("Grocery", data.hotelName || "", data.hotelAddress || "");
-      }
-
-      var storedData = getStoredData();
-      Object.keys(fieldIds).forEach(function (key) {
-        var field = document.getElementById(fieldIds[key]);
-        if (!field) {
-          return;
-        }
-        field.value = storedData[key] || "";
-        field.addEventListener("input", function () {
-          storedData[key] = field.value;
-          saveData(storedData);
-          updateDisplay(storedData);
-        });
-      });
-
-      updateDisplay(storedData);
-
-      var journalField = document.getElementById("travel-journal-text");
-      journalField.value = localStorage.getItem(journalKey) || "";
-      journalField.addEventListener("input", function () {
-        localStorage.setItem(journalKey, journalField.value);
-      });
-    })();
-  </script>
+  <script type="module" src="js/firebase-sync.js"></script>
 </body>
 </html>
 
