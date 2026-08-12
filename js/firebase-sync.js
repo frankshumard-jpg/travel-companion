@@ -441,7 +441,19 @@ function observeTextareaChanges() {
 
   observer.observe(document.body, { childList: true, subtree: true });
 }
+function ensureGlobalSyncPanel() {
+  return null;
+}
 
+function updateAuthUi(user) {
+  if (user) {
+    console.log("Firebase signed in:", user.email);
+  } else {
+    signInWithPopup(auth, provider).catch((error) => {
+      console.error("Google sign-in failed:", error);
+    });
+  }
+}
 window.addEventListener('load', () => {
   ensureGlobalSyncPanel();
   bindAllTextareas();
