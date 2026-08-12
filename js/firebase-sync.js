@@ -441,9 +441,7 @@ function observeTextareaChanges() {
 
   observer.observe(document.body, { childList: true, subtree: true });
 }
-function ensureGlobalSyncPanel() {
-  return null;
-}
+
 
 function updateAuthUi(user) {
   if (user) {
