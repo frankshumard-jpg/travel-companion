@@ -942,62 +942,6 @@ main[data-london-phase1-ui="true"] .london-personal-actions > [data-add-to-today
   flex-wrap: wrap;
 }
 
-.cloud-sync-panel {
-  padding: 1rem 1.25rem;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.cloud-sync-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-.cloud-sync-panel p {
-  margin: 0.55rem 0 0;
-  color: var(--muted);
-}
-
-.cloud-sync-actions {
-  margin-top: 0.8rem;
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.cloud-sync-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin: 0.55rem 0 1rem;
-  flex-wrap: wrap;
-}
-
-.cloud-save-button {
-  padding: 0.55rem 1rem;
-  min-width: 5.5rem;
-  font-size: 0.96rem;
-}
-
-.cloud-sync-status {
-  font-size: 0.96rem;
-  color: var(--muted);
-}
-
-.cloud-sync-status[data-state="saved"],
-#cloud-sync-global-status[data-state="saved"] {
-  color: #b8ffcb;
-}
-
-.cloud-sync-status[data-state="error"],
-#cloud-sync-global-status[data-state="error"] {
-  color: #ffc8c8;
-}
-
 .placeholder {
   color: var(--muted);
   line-height: 1.9;

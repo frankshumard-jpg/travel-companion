@@ -2,12 +2,12 @@
 "name": "Beyond the Gangway Travel",
 "short_name": "Beyond the Gangway",
  "description": "Your intelligent cruise and travel companion for ports around the world.",
- "id": "./",
-"scope": "./",
+ "id": "/",
+"scope": "/",
 "orientation": "portrait",
 "display": "standalone",
 
- "start_url": "./index.html",
+ "start_url": "index.html",
   "background_color": "#051827",
   "theme_color": "#0b294a",
   "icons": [

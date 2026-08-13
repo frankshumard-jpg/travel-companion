@@ -1,16 +1,16 @@
-﻿const CACHE_NAME = 'travel-companion-v20';
+﻿const CACHE_NAME = 'travel-companion-v19';
 const ASSETS = [
-  './',
-  './index.html',
-  './london.html',
-  './shopping.html',
-  './faversham.html',
-  './edinburgh.html',
-  './cruise.html',
-  './dover.html',
-  './css/style.css',
-  './js/app.js',
-  './manifest.json'
+  '/',
+  '/index.html',
+  '/london.html',
+  '/shopping.html',
+  '/faversham.html',
+  '/edinburgh.html',
+  '/cruise.html',
+  '/dover.html',
+  '/css/style.css',
+  '/js/app.js',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -50,7 +50,7 @@ self.addEventListener('fetch', (event) => {
         }
 
         if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
+          return caches.match('/index.html');
         }
 
         return undefined;

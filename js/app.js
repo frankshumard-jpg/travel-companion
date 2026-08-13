@@ -2456,10 +2456,10 @@ function buildLondonNearbyItem(originQuery, nearby) {
 function buildLondonAttractionCard(template) {
   const attractionQuery = template.googleMapsQuery || template.title;
   const attractionMaps = buildMapsSearchUrl(attractionQuery);
-  const walkThere = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=walking`;
+  const walkThere = buildWalkingDirectionsUrl('The May Fair Hotel', attractionQuery);
   const gpsNavigate = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=walking&dir_action=navigate`;
-  const tubeRoute = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=transit&transit_mode=subway`;
-  const busRoute = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(attractionQuery)}&travelmode=transit&transit_mode=bus`;
+  const tubeRoute = buildTransitDirectionsUrl('The May Fair Hotel', attractionQuery, 'subway');
+  const busRoute = buildTransitDirectionsUrl('The May Fair Hotel', attractionQuery, 'bus');
   const templateKey = template.key;
   const personalMeta = londonPersonalMetadata[templateKey] || {};
   const foodLinks = personalMeta.food || {
@@ -2486,8 +2486,8 @@ function buildLondonAttractionCard(template) {
   const featuredExperiences = (template.featuredExperiences || []).map((experience) => {
     const locationQuery = experience.mapsQuery || experience.title;
     const experienceMaps = buildMapsSearchUrl(locationQuery);
-    const experienceWalk = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(locationQuery)}&travelmode=walking`;
-    const experienceTransit = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(locationQuery)}&travelmode=transit`;
+    const experienceWalk = buildWalkingDirectionsUrl('The May Fair Hotel', locationQuery);
+    const experienceTransit = buildTransitDirectionsUrl('The May Fair Hotel', locationQuery, 'transit');
     const nearbyItems = (experience.nearby || [])
       .map((nearby) => buildLondonNearbyItem(locationQuery, nearby))
       .join('');
